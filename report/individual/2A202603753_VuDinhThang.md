@@ -250,7 +250,7 @@
 | Nhãn chấm tay | `results/agent/{dev,test}/<cấu hình>/reviews.json`; context test: `context_grades.json` |
 | Tổng hợp nhãn | `results/agent/{dev,test}/<cấu hình>/agent_metrics.json` (`starter/agent_metrics.py`) |
 | Tiêu chí và quyết định chọn | [results/selection_criteria.json](../../results/selection_criteria.json), [results/selection.json](../../results/selection.json) |
-| Lệnh chạy | [README.md, mục "Cách chạy bài làm"](../../README.md#cách-chạy-bài-làm) |
+| Lệnh chạy | Mục [Cách chạy](#cách-chạy) cuối báo cáo |
 
   Thời gian và chi phí: retrieval ~0.5 ms (BM25) đến ~250 ms (rerank) mỗi query, CPU, $0. Agent ~3–4 s/câu, ~$0.0003/câu; toàn bộ thử nghiệm agent ≈ $0.031.
 
@@ -297,3 +297,88 @@
 - Model: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`, `cross-encoder/ms-marco-MiniLM-L-6-v2` (Hugging Face), `openai/gpt-4o-mini` (qua OpenRouter).
 - Thư viện: pgvector, psycopg, sentence-transformers, rank-bm25, openai.
 - Công cụ: code, phân tích và nhãn nháp được hỗ trợ bởi Claude Code (Anthropic); sinh viên kiểm tra kết quả, đọc lại trace và duyệt nhãn.
+
+## Cách chạy
+
+**Yêu cầu:** Python 3.11+, Docker Desktop, API key OpenAI **hoặc** OpenRouter (model hỗ trợ tool calling). Dữ liệu và database đến từ repo Day 6 (`K5-L3-Day06-VuDinhThang-2A202603753-DataIngestionEngineering`), đặt cạnh repo này. Mọi lệnh chạy từ thư mục gốc repo.
+
+**1. Cài đặt**
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate   ·   macOS/Linux: source .venv/bin/activate
+pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements.txt
+cp .env.example .env      # Windows PowerShell: Copy-Item .env.example .env
+```
+Điền `.env` (**không commit**):
+```
+PROVIDER=openrouter            # hoặc openai
+MODEL=openai/gpt-4o-mini       # với PROVIDER=openai: gpt-4o-mini
+OPENAI_API_KEY=<key>
+DATABASE_URL=postgresql://day6:day6_local_only@127.0.0.1:55433/day6_lab
+EMBEDDING_MODEL=sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+DAY6_STRATEGY=B                # Day 6 strategy C = chunk B + filter district
+```
+Trên Windows nên đặt `PYTHONUTF8=1` (`setx PYTHONUTF8 1`); một test của starter đọc file không chỉ định encoding.
+
+**2. Bật vector store Day 6 và kiểm tra**
+```bash
+cd ../K5-L3-Day06-VuDinhThang-2A202603753-DataIngestionEngineering/starter
+docker compose up -d                 # PostgreSQL 16 + pgvector, volume giữ dữ liệu Day 6
+cd -
+python src/check_env.py              # gọi thử LLM: chat + tool calling
+python src/check_day6.py             # 329 chunk, vector(384), truy vấn mẫu
+```
+Nếu volume Day 6 đã bị xóa: chạy lại `python scripts/run_ingest.py` trong `starter/` của Day 6 (embedding local, $0).
+
+**3. Dữ liệu và benchmark**
+```bash
+python src/export_day6.py
+```
+Tạo `data/day6/chunks.json` (329 chunk), `questions.json` (20 câu có đáp án) và `cases.json` (24 câu, gồm 4 câu thiếu bằng chứng từ `data/unanswerable.json`). Script tự kiểm tra evidence nằm trọn trong chunk, và các regex kiểm tra vắng mặt đều 0 hit. Các file trong `data/day6/` đã được commit sẵn (tài liệu public domain).
+
+**4. Benchmark retrieval** (6 phương pháp × có/không filter)
+```bash
+python src/eval_retrieval.py --split dev     # → results/retrieval/dev/{summary.json,traces.jsonl}
+python src/eval_retrieval.py --split test    # chỉ chạy được khi có results/selection.json
+```
+
+**5. Agent**
+```bash
+python src/run_agent.py --split dev                                              # cấu hình chọn
+python src/run_agent.py --split dev --retriever dense --name A-dense-v1          # baseline
+python src/run_agent.py --split dev --no-district-guard --name B-hybrid_rerank-noguard-v1
+python src/run_agent.py --split dev --prompt v2 --name C-hybrid_rerank-v2
+python src/run_agent.py --split test                                             # sau khi chốt
+python src/run_agent.py --split test --retriever dense --name A-dense-v1
+```
+Kết quả ở `results/agent/<split>/<name>/`: `traces.json`, `summary.json`, cùng hai file phụ để chấm tay `review.md` và `reviews_template.json` (không commit). Nhãn đã chấm nằm ở `reviews.json`. Chi phí khoảng $0.005 cho 17 câu dev. LLM qua API nên câu chữ có thể khác nhẹ giữa các lần chạy; nhãn ứng với trace đã commit.
+
+**6. Tổng hợp nhãn chấm tay**
+```bash
+python starter/agent_metrics.py --cases data/day6/cases.json \
+  --traces  results/agent/test/hybrid_rerank-s4-k5-b4000/traces.json \
+  --reviews results/agent/test/hybrid_rerank-s4-k5-b4000/reviews.json \
+  --split test --output results/agent/test/hybrid_rerank-s4-k5-b4000/agent_metrics.json
+```
+
+**7. Unit test**
+```bash
+python -m unittest discover -s tests -v      # 36 test, mock LLM/retriever, không gọi API
+```
+
+**Cấu trúc code**
+
+| Đường dẫn | Nội dung |
+|---|---|
+| `src/llm.py` | Cấu hình LLM (`PROVIDER`, `MODEL`, `OPENAI_API_KEY`) |
+| `src/day6_store.py` | Kết nối pgvector + embedding Day 6, `DenseRetriever` |
+| `src/retrievers.py` | BM25, TF-IDF, Hybrid RRF, Cross-encoder rerank |
+| `src/eval_retrieval.py` | Benchmark retrieval: Hit@1/3/10, MRR, Context Evidence Rate |
+| `src/agent.py` | Agent tool calling: `search`, `submit_answer`, citation, context budget, chốt district |
+| `src/run_agent.py` | Chạy agent, trace, chấm context sau khi chạy |
+| `src/export_day6.py` | Xuất chunk + benchmark, kiểm tra evidence |
+| `src/check_env.py`, `src/check_day6.py` | Kiểm tra kết nối LLM và Day 6 |
+| `data/day6/`, `data/unanswerable.json` | Corpus, benchmark 24 câu, manifest nguồn |
+| `results/` | Trace, summary, nhãn (`reviews.json`, `context_grades.json`), `selection_criteria.json`, `selection.json`, `pip_freeze.txt` |
+| `tests/test_retrievers.py`, `tests/test_agent.py` | Test retriever và agent (gồm test chống rò rỉ gold) |
