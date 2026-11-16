@@ -11,6 +11,7 @@
   - Số trang: 56 trang PDF vật lý; **52 trang nội dung được tính** (bỏ bìa trước p1, mục lục p2, bìa sau p56; p35 chỉ 233 ký tự nên được ingest nhưng không tính). `page` = số trang PDF vật lý, bắt đầu từ 1.
   - Số chunk: **329** (chunk strategy B của Day 6: tách theo heading/section, gom câu trọn vẹn tối đa 500 ký tự, có tiền tố `[District | Section]`). Metadata: `district` (About, National và 12 District), `section`.
   - Manifest đầy đủ: [data/day6/manifest.json](../../data/day6/manifest.json) (sao chép từ Day 6).
+  - **Repo Day 6** (PDF gốc, code ingest, Docker Compose của vector store, benchmark gốc): <https://github.com/ThangVu2303/K5-L3-Day06-VuDinhThang-2A202603753-DataIngestionEngineering>. Tái tạo vector store: `docker compose up -d` trong `starter/` rồi `python scripts/run_ingest.py` (embedding local, $0). Các file `data/day6/*.json` trong repo này cho phép chạy BM25/TF-IDF và đọc trace mà không cần Day 6.
 - **Vector store, embedding model, phiên bản và số chiều:**
   - Vector store: PostgreSQL 16 + pgvector 0.8.7 (Docker image `pgvector/pgvector:0.8.7-pg16`, `127.0.0.1:55433`, database `day6_lab`, bảng `chunks`). Tìm cosine chính xác (`<=>`), không dùng ANN index.
   - Embedding: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`, **384 chiều**, chuẩn hóa L2, chạy CPU (sentence-transformers 6.3.0, torch 2.15.0+cpu), chi phí $0. Query Day 7 dùng đúng model và cách chuẩn hóa này nên tương thích với index Day 6.
@@ -300,7 +301,7 @@
 
 ## Cách chạy
 
-**Yêu cầu:** Python 3.11+, Docker Desktop, API key OpenAI **hoặc** OpenRouter (model hỗ trợ tool calling). Dữ liệu và database đến từ repo Day 6 (`K5-L3-Day06-VuDinhThang-2A202603753-DataIngestionEngineering`), đặt cạnh repo này. Mọi lệnh chạy từ thư mục gốc repo.
+**Yêu cầu:** Python 3.11+, Docker Desktop, API key OpenAI **hoặc** OpenRouter (model hỗ trợ tool calling). Dữ liệu và database đến từ repo Day 6 (<https://github.com/ThangVu2303/K5-L3-Day06-VuDinhThang-2A202603753-DataIngestionEngineering>), clone đặt cạnh repo này. Mọi lệnh chạy từ thư mục gốc repo.
 
 **1. Cài đặt**
 ```bash
