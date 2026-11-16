@@ -1,0 +1,2408 @@
+[
+ {
+  "query_id": "q01",
+  "question": "How many times per year is the Beige Book published?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "The Beige Book is published eight times per year [B:beigebook-2026-10:p003:000:5ef99078].",
+  "answer_labels": "The Beige Book is published eight times per year [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p003:000:5ef99078"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "how many times per year is the Beige Book published",
+    "model_district": null,
+    "filter": null,
+    "filter_source": null,
+    "elapsed_ms": 76.7,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p003:000:5ef99078",
+      "page": 3,
+      "district": "About",
+      "score": 0.545
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p003:001:701bc2dd",
+      "page": 3,
+      "district": "About",
+      "score": 0.4483
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p003:002:8d735a05",
+      "page": 3,
+      "district": "About",
+      "score": 0.4252
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p003:004:9455fbb5",
+      "page": 3,
+      "district": "About",
+      "score": 0.2974
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p005:000:851aa1cf",
+      "page": 5,
+      "district": "National",
+      "score": 0.2957
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p003:000:5ef99078",
+     "B:beigebook-2026-10:p003:001:701bc2dd",
+     "B:beigebook-2026-10:p003:002:8d735a05",
+     "B:beigebook-2026-10:p003:004:9455fbb5",
+     "B:beigebook-2026-10:p005:000:851aa1cf"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "The Beige Book is published eight times per year [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p003:000:5ef99078",
+   "S2": "B:beigebook-2026-10:p003:001:701bc2dd",
+   "S3": "B:beigebook-2026-10:p003:002:8d735a05",
+   "S4": "B:beigebook-2026-10:p003:004:9455fbb5",
+   "S5": "B:beigebook-2026-10:p005:000:851aa1cf"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p003:000:5ef99078",
+   "B:beigebook-2026-10:p003:001:701bc2dd",
+   "B:beigebook-2026-10:p003:002:8d735a05",
+   "B:beigebook-2026-10:p003:004:9455fbb5",
+   "B:beigebook-2026-10:p005:000:851aa1cf"
+  ],
+  "context": "[B:beigebook-2026-10:p003:000:5ef99078 | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | What is the Beige Book?] The Beige Book is a Federal Reserve System publication about current economic conditions across the 12 Federal Reserve Districts. It characterizes regional economic conditions and prospects based on a variety of mostly qualitative information, gathered directly from each District's sources. Reports are published eight times per year.\n\n[B:beigebook-2026-10:p003:001:701bc2dd | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | What is the purpose of the Beige Book?] The Beige Book is intended to characterize the change in economic conditions since the last report. Outreach for the Beige Book is one of many ways the Federal Reserve System engages with businesses and other organizations about economic developments in their communities.\n\n[B:beigebook-2026-10:p003:002:8d735a05 | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | What is the purpose of the Beige Book?] Because this information is collected from a wide range of contacts through a variety of formal and informal methods, the Beige Book can complement other forms of regional information gathering. The Beige Book is not a commentary on the views of Federal Reserve officials.\n\n[B:beigebook-2026-10:p003:004:9455fbb5 | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | How is the information collected?] Contacts are not selected at random; rather, Banks strive to curate a diverse set of sources that can provide accurate and objective information about a broad range of economic activities. The Beige Book serves as a regular summary of this information for the public.\n\n[B:beigebook-2026-10:p005:000:851aa1cf | starter/data/BeigeBook_20261014.pdf | page 5]\n[National | Overall Economic Activity] Since the prior Beige Book, two of the twelve Federal Reserve Districts reported moderate growth in economic activity. Three Districts reported modest growth, while four reported slight growth, and three reported no significant change. Robust, broad-based growth in manufacturing led the moderate growth reported in the Dallas District. While not as robust, another six Districts reported modest to moderate growth from their manufacturing firms.",
+  "context_chars": 2250,
+  "tokens": {
+   "input": 1564,
+   "output": 61
+  },
+  "cost_usd": 0.000271,
+  "elapsed_ms": 6749.5,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q02",
+  "question": "Does the Beige Book express the opinions of Fed policymakers?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "The Beige Book summarizes comments from contacts outside the Federal Reserve System and does not reflect the views of Federal Reserve officials [B:beigebook-2026-10:p005:007:ada8e3a2].",
+  "answer_labels": "The Beige Book summarizes comments from contacts outside the Federal Reserve System and does not reflect the views of Federal Reserve officials [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p005:007:ada8e3a2"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "opinions of Fed policymakers",
+    "model_district": null,
+    "filter": null,
+    "filter_source": null,
+    "elapsed_ms": 46.5,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p005:007:ada8e3a2",
+      "page": 5,
+      "district": "National",
+      "score": 0.55
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p004:001:a7e444b1",
+      "page": 4,
+      "district": "About",
+      "score": 0.5011
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p005:000:851aa1cf",
+      "page": 5,
+      "district": "National",
+      "score": 0.4376
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p003:005:b39ed996",
+      "page": 3,
+      "district": "About",
+      "score": 0.4216
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p011:003:80e6546c",
+      "page": 11,
+      "district": "Boston",
+      "score": 0.4041
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p005:007:ada8e3a2",
+     "B:beigebook-2026-10:p004:001:a7e444b1",
+     "B:beigebook-2026-10:p005:000:851aa1cf",
+     "B:beigebook-2026-10:p003:005:b39ed996",
+     "B:beigebook-2026-10:p011:003:80e6546c"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "The Beige Book summarizes comments from contacts outside the Federal Reserve System and does not reflect the views of Federal Reserve officials [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p005:007:ada8e3a2",
+   "S2": "B:beigebook-2026-10:p004:001:a7e444b1",
+   "S3": "B:beigebook-2026-10:p005:000:851aa1cf",
+   "S4": "B:beigebook-2026-10:p003:005:b39ed996",
+   "S5": "B:beigebook-2026-10:p011:003:80e6546c"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p005:007:ada8e3a2",
+   "B:beigebook-2026-10:p004:001:a7e444b1",
+   "B:beigebook-2026-10:p005:000:851aa1cf",
+   "B:beigebook-2026-10:p003:005:b39ed996",
+   "B:beigebook-2026-10:p011:003:80e6546c"
+  ],
+  "context": "[B:beigebook-2026-10:p005:007:ada8e3a2 | starter/data/BeigeBook_20261014.pdf | page 5]\n[National | Labor Markets] This document summarizes comments received from contacts outside the Federal Reserve System and is not a commentary on the views of Federal Reserve officials.\n\n[B:beigebook-2026-10:p004:001:a7e444b1 | starter/data/BeigeBook_20261014.pdf | page 4]\n[About | How is the information used?] A list of statistical releases compiled by the Federal Reserve Board is available here, links to each of the Federal Reserve Banks are available here, and a summary of the System's community outreach is available here. In addition, Fed Listens events have been held around the country to hear about how monetary policy affects peoples' daily lives and livelihoods.\n\n[B:beigebook-2026-10:p005:000:851aa1cf | starter/data/BeigeBook_20261014.pdf | page 5]\n[National | Overall Economic Activity] Since the prior Beige Book, two of the twelve Federal Reserve Districts reported moderate growth in economic activity. Three Districts reported modest growth, while four reported slight growth, and three reported no significant change. Robust, broad-based growth in manufacturing led the moderate growth reported in the Dallas District. While not as robust, another six Districts reported modest to moderate growth from their manufacturing firms.\n\n[B:beigebook-2026-10:p003:005:b39ed996 | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | How is the information used?] The information from contacts supplements the data and analysis used by Federal Reserve economists and staff to assess economic conditions in the Federal Reserve Districts. The qualitative nature of the Beige Book creates an opportunity to characterize dynamics and identify emerging trends in the economy that may not be readily apparent in the available economic data.\n\n[B:beigebook-2026-10:p011:003:80e6546c | starter/data/BeigeBook_20261014.pdf | page 11]\n[Boston | Financial Services] Banks expressed decreased optimism and greater uncertainty—tied to the conflict in the Middle East, interest rates, and upcoming elections—while other financial services firms maintained stable to optimistic outlooks.",
+  "context_chars": 2173,
+  "tokens": {
+   "input": 1527,
+   "output": 69
+  },
+  "cost_usd": 0.00027,
+  "elapsed_ms": 2895.8,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q03",
+  "question": "Which Reserve Bank prepared the October 2026 Beige Book, and what was the information cut-off date?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "The October 2026 Beige Book was prepared by the Federal Reserve System, and the information cut-off date was September 29, 2026. [B:beigebook-2026-10:p003:000:5ef99078][B:beigebook-2026-10:p005:007:ada8e3a2]",
+  "answer_labels": "The October 2026 Beige Book was prepared by the Federal Reserve System, and the information cut-off date was September 29, 2026. [S1][S8]",
+  "citations": [
+   "B:beigebook-2026-10:p003:000:5ef99078",
+   "B:beigebook-2026-10:p005:007:ada8e3a2"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "October 2026 Beige Book prepared by",
+    "model_district": "About",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 45.7,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p003:000:5ef99078",
+      "page": 3,
+      "district": "About",
+      "score": 0.5867
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p003:001:701bc2dd",
+      "page": 3,
+      "district": "About",
+      "score": 0.5255
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p003:002:8d735a05",
+      "page": 3,
+      "district": "About",
+      "score": 0.4784
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p003:005:b39ed996",
+      "page": 3,
+      "district": "About",
+      "score": 0.3722
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p003:004:9455fbb5",
+      "page": 3,
+      "district": "About",
+      "score": 0.2629
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p003:000:5ef99078",
+     "B:beigebook-2026-10:p003:001:701bc2dd",
+     "B:beigebook-2026-10:p003:002:8d735a05",
+     "B:beigebook-2026-10:p003:005:b39ed996",
+     "B:beigebook-2026-10:p003:004:9455fbb5"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "October 2026 Beige Book information cut-off date",
+    "model_district": "About",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 55.1,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p003:000:5ef99078",
+      "page": 3,
+      "district": "About",
+      "score": 0.4744
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p003:001:701bc2dd",
+      "page": 3,
+      "district": "About",
+      "score": 0.3787
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p003:002:8d735a05",
+      "page": 3,
+      "district": "About",
+      "score": 0.366
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p003:005:b39ed996",
+      "page": 3,
+      "district": "About",
+      "score": 0.3106
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p050:005:51ea88a4",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.2737
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p050:005:51ea88a4"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "October 2026 Beige Book",
+    "model_district": "National",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 111.1,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p003:000:5ef99078",
+      "page": 3,
+      "district": "About",
+      "score": 0.5738
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p003:001:701bc2dd",
+      "page": 3,
+      "district": "About",
+      "score": 0.5075
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p003:002:8d735a05",
+      "page": 3,
+      "district": "About",
+      "score": 0.4584
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p003:005:b39ed996",
+      "page": 3,
+      "district": "About",
+      "score": 0.3678
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p018:004:f03fe1eb",
+      "page": 18,
+      "district": "Philadelphia",
+      "score": 0.2636
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p018:004:f03fe1eb"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "October 2026 Beige Book prepared by which Reserve Bank",
+    "model_district": "National",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 44.1,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p003:000:5ef99078",
+      "page": 3,
+      "district": "About",
+      "score": 0.6213
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p003:001:701bc2dd",
+      "page": 3,
+      "district": "About",
+      "score": 0.5768
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p003:002:8d735a05",
+      "page": 3,
+      "district": "About",
+      "score": 0.5036
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p003:005:b39ed996",
+      "page": 3,
+      "district": "About",
+      "score": 0.5021
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p005:007:ada8e3a2",
+      "page": 5,
+      "district": "National",
+      "score": 0.441
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p005:007:ada8e3a2"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search_limit",
+    "max_searches": 4
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "The October 2026 Beige Book was prepared by the Federal Reserve System, and the information cut-off date was September 29, 2026.",
+    "citation_labels": [
+     "S1",
+     "S8"
+    ],
+    "invalid_labels": []
+   },
+   {
+    "event": "citation_appended",
+    "labels": [
+     "S1",
+     "S8"
+    ]
+   }
+  ],
+  "num_searches": 4,
+  "llm_calls": 5,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p003:000:5ef99078",
+   "S2": "B:beigebook-2026-10:p003:001:701bc2dd",
+   "S3": "B:beigebook-2026-10:p003:002:8d735a05",
+   "S4": "B:beigebook-2026-10:p003:005:b39ed996",
+   "S5": "B:beigebook-2026-10:p003:004:9455fbb5",
+   "S6": "B:beigebook-2026-10:p050:005:51ea88a4",
+   "S7": "B:beigebook-2026-10:p018:004:f03fe1eb",
+   "S8": "B:beigebook-2026-10:p005:007:ada8e3a2"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p003:000:5ef99078",
+   "B:beigebook-2026-10:p003:001:701bc2dd",
+   "B:beigebook-2026-10:p003:002:8d735a05",
+   "B:beigebook-2026-10:p003:005:b39ed996",
+   "B:beigebook-2026-10:p003:004:9455fbb5",
+   "B:beigebook-2026-10:p050:005:51ea88a4",
+   "B:beigebook-2026-10:p018:004:f03fe1eb",
+   "B:beigebook-2026-10:p005:007:ada8e3a2"
+  ],
+  "context": "[B:beigebook-2026-10:p003:000:5ef99078 | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | What is the Beige Book?] The Beige Book is a Federal Reserve System publication about current economic conditions across the 12 Federal Reserve Districts. It characterizes regional economic conditions and prospects based on a variety of mostly qualitative information, gathered directly from each District's sources. Reports are published eight times per year.\n\n[B:beigebook-2026-10:p003:001:701bc2dd | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | What is the purpose of the Beige Book?] The Beige Book is intended to characterize the change in economic conditions since the last report. Outreach for the Beige Book is one of many ways the Federal Reserve System engages with businesses and other organizations about economic developments in their communities.\n\n[B:beigebook-2026-10:p003:002:8d735a05 | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | What is the purpose of the Beige Book?] Because this information is collected from a wide range of contacts through a variety of formal and informal methods, the Beige Book can complement other forms of regional information gathering. The Beige Book is not a commentary on the views of Federal Reserve officials.\n\n[B:beigebook-2026-10:p003:005:b39ed996 | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | How is the information used?] The information from contacts supplements the data and analysis used by Federal Reserve economists and staff to assess economic conditions in the Federal Reserve Districts. The qualitative nature of the Beige Book creates an opportunity to characterize dynamics and identify emerging trends in the economy that may not be readily apparent in the available economic data.\n\n[B:beigebook-2026-10:p003:004:9455fbb5 | starter/data/BeigeBook_20261014.pdf | page 3]\n[About | How is the information collected?] Contacts are not selected at random; rather, Banks strive to curate a diverse set of sources that can provide accurate and objective information about a broad range of economic activities. The Beige Book serves as a regular summary of this information for the public.\n\n[B:beigebook-2026-10:p050:005:51ea88a4 | starter/data/BeigeBook_20261014.pdf | page 50]\n[Dallas | Energy] Most Dallas Fed Energy Survey respondents anticipate that it will take until the end of the second quarter 2027 or beyond for crude oil exports from the Persian Gulf to return to normal levels. Thus, most contacts expect oil prices over the next year to remain well above the average breakeven price needed to profitably drill new wells, but there is elevated uncertainty regarding their price outlooks.\n\n[B:beigebook-2026-10:p018:004:f03fe1eb | starter/data/BeigeBook_20261014.pdf | page 18]\n[Philadelphia | Prices] Looking ahead, multiple contacts expect the impact of contract repricing and expiring hedges to broaden over the next few months, leading to further price pressures. The indexes for future prices paid and future prices received rose further in September and are now among their highest readings of the past 35 years.\n\n[B:beigebook-2026-10:p005:007:ada8e3a2 | starter/data/BeigeBook_20261014.pdf | page 5]\n[National | Labor Markets] This document summarizes comments received from contacts outside the Federal Reserve System and is not a commentary on the views of Federal Reserve officials.",
+  "context_chars": 3389,
+  "tokens": {
+   "input": 5527,
+   "output": 148
+  },
+  "cost_usd": 0.000735,
+  "elapsed_ms": 7099.4,
+  "split": "dev",
+  "context_hit": false,
+  "cited_gold": false
+ },
+ {
+  "query_id": "q04",
+  "question": "How many Federal Reserve Districts reported no significant change in overall economic activity?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "Two Federal Reserve Districts reported no significant change in overall economic activity: the Chicago District and the St. Louis District [B:beigebook-2026-10:p007:003:fee2a4db][B:beigebook-2026-10:p032:000:ab63e9ed].",
+  "answer_labels": "Two Federal Reserve Districts reported no significant change in overall economic activity: the Chicago District and the St. Louis District [S2][S5].",
+  "citations": [
+   "B:beigebook-2026-10:p007:003:fee2a4db",
+   "B:beigebook-2026-10:p032:000:ab63e9ed"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "no significant change in overall economic activity",
+    "model_district": null,
+    "filter": null,
+    "filter_source": null,
+    "elapsed_ms": 42.2,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p009:000:23958286",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.5776
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p007:003:fee2a4db",
+      "page": 7,
+      "district": "National",
+      "score": 0.5775
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p036:001:1afd6ccf",
+      "page": 36,
+      "district": "St. Louis",
+      "score": 0.5532
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p007:004:5d78144e",
+      "page": 7,
+      "district": "National",
+      "score": 0.5523
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p032:000:ab63e9ed",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.5447
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p009:000:23958286",
+     "B:beigebook-2026-10:p007:003:fee2a4db",
+     "B:beigebook-2026-10:p036:001:1afd6ccf",
+     "B:beigebook-2026-10:p007:004:5d78144e",
+     "B:beigebook-2026-10:p032:000:ab63e9ed"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "overall economic activity unchanged",
+    "model_district": "National",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 50.8,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p032:000:ab63e9ed",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.6175
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p009:000:23958286",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.6098
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p007:003:fee2a4db",
+      "page": 7,
+      "district": "National",
+      "score": 0.6052
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p048:000:c74f374e",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.6024
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p007:002:7ebc446c",
+      "page": 7,
+      "district": "National",
+      "score": 0.5944
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p048:000:c74f374e",
+     "B:beigebook-2026-10:p007:002:7ebc446c"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "no significant change in economic activity",
+    "model_district": "Chicago",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 48.8,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p007:003:fee2a4db",
+      "page": 7,
+      "district": "National",
+      "score": 0.5806
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p009:000:23958286",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.5801
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p032:000:ab63e9ed",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.5501
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p009:001:32838225",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.5462
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p007:004:5d78144e",
+      "page": 7,
+      "district": "National",
+      "score": 0.5404
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p009:001:32838225"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "no change in economic activity",
+    "model_district": "St. Louis",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 41.3,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p007:003:fee2a4db",
+      "page": 7,
+      "district": "National",
+      "score": 0.577
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p009:000:23958286",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.55
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p032:000:ab63e9ed",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.5401
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p009:001:32838225",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.5075
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p048:000:c74f374e",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.5047
+     }
+    ],
+    "new_context_ids": [],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search_limit",
+    "max_searches": 4
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "Two Federal Reserve Districts reported no significant change in overall economic activity: the Chicago District and the St. Louis District [S2][S5].",
+    "citation_labels": [
+     "S2",
+     "S5"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 4,
+  "llm_calls": 5,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p009:000:23958286",
+   "S2": "B:beigebook-2026-10:p007:003:fee2a4db",
+   "S3": "B:beigebook-2026-10:p036:001:1afd6ccf",
+   "S4": "B:beigebook-2026-10:p007:004:5d78144e",
+   "S5": "B:beigebook-2026-10:p032:000:ab63e9ed",
+   "S6": "B:beigebook-2026-10:p048:000:c74f374e",
+   "S7": "B:beigebook-2026-10:p007:002:7ebc446c",
+   "S8": "B:beigebook-2026-10:p009:001:32838225"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p009:000:23958286",
+   "B:beigebook-2026-10:p007:003:fee2a4db",
+   "B:beigebook-2026-10:p036:001:1afd6ccf",
+   "B:beigebook-2026-10:p007:004:5d78144e",
+   "B:beigebook-2026-10:p032:000:ab63e9ed",
+   "B:beigebook-2026-10:p048:000:c74f374e",
+   "B:beigebook-2026-10:p007:002:7ebc446c",
+   "B:beigebook-2026-10:p009:001:32838225"
+  ],
+  "context": "[B:beigebook-2026-10:p009:000:23958286 | starter/data/BeigeBook_20261014.pdf | page 9]\n[Boston | Summary of Economic Activity] Economic activity expanded slightly, with mixed results across sectors. Retail spending softened, and tourism activity was variable, leaving consumer spending as a whole unchanged. Activity in manufacturing and nonfinancial services edged higher. Bank loan volume expanded slightly. Commercial real estate activity was stable, but construction slowed, and home sales saw moderate declines.\n\n[B:beigebook-2026-10:p007:003:fee2a4db | starter/data/BeigeBook_20261014.pdf | page 7]\n[National | Highlights - Chicago] Economic activity was flat on balance. Manufacturing demand rose modestly; employment was up slightly; consumer spending was flat on balance; construction and real estate activity and business spending declined slightly; and nonbusiness contacts saw no change in economic activity. Prices rose moderately, wages rose modestly, and financial conditions tightened modestly. Farm income expectations for 2026 were down slightly.\n\n[B:beigebook-2026-10:p036:001:1afd6ccf | starter/data/BeigeBook_20261014.pdf | page 36]\n[St. Louis | Summary of Economic Activity] Activity in nonfinancial services and manufacturing increased modestly overall, with manufacturing gains driven primarily by stronger demand from national defense and from data center and energy construction. The outlook remains unchanged from our previous report, with persistent uncertainty weighing on expectations.\n\n[B:beigebook-2026-10:p007:004:5d78144e | starter/data/BeigeBook_20261014.pdf | page 7]\n[National | Highlights - St. Louis] Economic activity has modestly increased. Employment was unchanged and wage growth remained moderate. Prices have risen at a robust pace and increases were widespread. Businesses expressed rising concerns about health-care costs. The outlook has remained unchanged.\n\n[B:beigebook-2026-10:p032:000:ab63e9ed | starter/data/BeigeBook_20261014.pdf | page 32]\n[Chicago | Summary of Economic Activity] Economic activity in the Seventh District was flat on balance in late August and September, and contacts expected a slight pace of increase in the coming year. Manufacturing demand rose modestly; employment was up slightly; consumer spending was flat on balance; construction and real estate activity and business spending declined slightly; and nonbusiness contacts saw no change in economic activity.\n\n[B:beigebook-2026-10:p048:000:c74f374e | starter/data/BeigeBook_20261014.pdf | page 48]\n[Dallas | Summary of Economic Activity] Economic activity in the Eleventh District expanded moderately over the reporting period. Growth picked up notably in the manufacturing sector but eased in the banking and nonfinancial services sectors. Energy activity and retail sales continued to increase. Employment grew modestly with moderate wage growth. Price growth was strong. Outlooks were mostly positive, though inflation and continued geopolitical and trade policy uncertainty remained headwinds.\n\n[B:beigebook-2026-10:p007:002:7ebc446c | starter/data/BeigeBook_20261014.pdf | page 7]\n[National | Highlights - Atlanta] Economic activity grew modestly. Employment levels remained flat. Wages, costs, and prices rose moderately. Consumer spending and transportation activity expanded slightly. Residential real estate saw moderate growth and manufacturing was stable. Commercial real estate and lending rose at a modest pace. Energy activity grew moderately, and agriculture was mixed.\n\n[B:beigebook-2026-10:p009:001:32838225 | starter/data/BeigeBook_20261014.pdf | page 9]\n[Boston | Summary of Economic Activity] Employment showed small gains on an uptick in hiring, and wage growth was muted. Prices rose modestly on balance. The outlook dimmed somewhat, with widespread concerns about cost pressures on lower-income families, small businesses, and nonprofits, but there was cautious optimism regarding hiring activity and further growth in manufacturing and nonfinancial services.",
+  "context_chars": 4012,
+  "tokens": {
+   "input": 5763,
+   "output": 134
+  },
+  "cost_usd": 0.000753,
+  "elapsed_ms": 6491.7,
+  "split": "dev",
+  "context_hit": false,
+  "cited_gold": false
+ },
+ {
+  "query_id": "q05",
+  "question": "How are higher energy costs being passed along the supply chain, according to the national summary?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "Higher energy costs, particularly elevated diesel prices, are being passed along the supply chain through fuel surcharges, which increase costs for firms. Additionally, firms are managing their margins with selective price hikes and expect further price increases as existing contracts expire and renegotiations occur for inputs and delivery contracts [B:beigebook-2026-10:p006:001:65ae302a][B:beigebook-2026-10:p006:002:cfc41b9b].",
+  "answer_labels": "Higher energy costs, particularly elevated diesel prices, are being passed along the supply chain through fuel surcharges, which increase costs for firms. Additionally, firms are managing their margins with selective price hikes and expect further price increases as existing contracts expire and renegotiations occur for inputs and delivery contracts [S1][S3].",
+  "citations": [
+   "B:beigebook-2026-10:p006:001:65ae302a",
+   "B:beigebook-2026-10:p006:002:cfc41b9b"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "higher energy costs supply chain national summary",
+    "model_district": "National",
+    "filter": {
+     "district": "National"
+    },
+    "filter_source": "model",
+    "elapsed_ms": 58.0,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p006:001:65ae302a",
+      "page": 6,
+      "district": "National",
+      "score": 0.5847
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p006:000:ba321c23",
+      "page": 6,
+      "district": "National",
+      "score": 0.3721
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p006:002:cfc41b9b",
+      "page": 6,
+      "district": "National",
+      "score": 0.3623
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p006:003:2ba06c2e",
+      "page": 6,
+      "district": "National",
+      "score": 0.3289
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p007:001:0e4613bb",
+      "page": 7,
+      "district": "National",
+      "score": 0.2675
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p006:001:65ae302a",
+     "B:beigebook-2026-10:p006:000:ba321c23",
+     "B:beigebook-2026-10:p006:002:cfc41b9b",
+     "B:beigebook-2026-10:p006:003:2ba06c2e",
+     "B:beigebook-2026-10:p007:001:0e4613bb"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "Higher energy costs, particularly elevated diesel prices, are being passed along the supply chain through fuel surcharges, which increase costs for firms. Additionally, firms are managing their margins with selective price hikes and expect further price increases as existing contracts expire and renegotiations occur for inputs and delivery contracts [S1][S3].",
+    "citation_labels": [
+     "S1",
+     "S3"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p006:001:65ae302a",
+   "S2": "B:beigebook-2026-10:p006:000:ba321c23",
+   "S3": "B:beigebook-2026-10:p006:002:cfc41b9b",
+   "S4": "B:beigebook-2026-10:p006:003:2ba06c2e",
+   "S5": "B:beigebook-2026-10:p007:001:0e4613bb"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p006:001:65ae302a",
+   "B:beigebook-2026-10:p006:000:ba321c23",
+   "B:beigebook-2026-10:p006:002:cfc41b9b",
+   "B:beigebook-2026-10:p006:003:2ba06c2e",
+   "B:beigebook-2026-10:p007:001:0e4613bb"
+  ],
+  "context": "[B:beigebook-2026-10:p006:001:65ae302a | starter/data/BeigeBook_20261014.pdf | page 6]\n[National | Prices] Firms reported elevated diesel prices and noted that fuel surcharges were passing on increased costs throughout the supply chain. Contacts in multiple Districts also noted continued price pressure from other commodities, tariffs, and insurance. Consumer-facing firms noted tighter profit margins as price-sensitive customers continue to resist price hikes.\n\n[B:beigebook-2026-10:p006:000:ba321c23 | starter/data/BeigeBook_20261014.pdf | page 6]\n[National | Prices] Three Districts characterized overall price growth as robust, while eight noted that growth was moderate—and three of the eight noted that input price pressures were intensifying, if not already growing robustly. One District reported modest price growth. Moreover, four Districts reported that the pace of price increases picked up since the prior period. Higher oil prices permeated all District reports.\n\n[B:beigebook-2026-10:p006:002:cfc41b9b | starter/data/BeigeBook_20261014.pdf | page 6]\n[National | Prices] Contacts are managing their margins with selective price hikes, targeted incentives, and menu changes that reduce their costs. Firms in several Districts cited persistent uncertainty around energy and tariffs and expect that prices will increase further in the coming months, as existing contracts expire, and firms must renegotiate hedge contracts for their own inputs and/or delivery contracts to their customers.\n\n[B:beigebook-2026-10:p006:003:2ba06c2e | starter/data/BeigeBook_20261014.pdf | page 6]\n[National | Highlights - Boston] Economic activity expanded further, slightly. Consumer spending was flat, with an uptick in tourism spending but softer retail sales. Employment rose by a small margin, with wages up slightly on average. Home sales showed new weakness. Inflation was modest overall, but home heating oil prices rose sharply from a year earlier, raising concerns about heating costs for the winter.\n\n[B:beigebook-2026-10:p007:001:0e4613bb | starter/data/BeigeBook_20261014.pdf | page 7]\n[National | Highlights - Richmond] The regional economy continued to grow moderately. Consumer spending remained solid amid continued tradeoffs due to higher gas prices. Hotels reported strong occupancy rates this cycle. Manufacturing activity was flat despite strength reported in some high-growth sectors and regions. Nonfinancial services reported modest growth while the remaining sectors reported little change in activity. Employment grew slightly and price growth remained moderate.",
+  "context_chars": 2582,
+  "tokens": {
+   "input": 1603,
+   "output": 116
+  },
+  "cost_usd": 0.00031,
+  "elapsed_ms": 5783.5,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q06",
+  "question": "In the Cleveland District, for how many consecutive reporting periods have nonlabor cost pressures remained robust?",
+  "user_filter": {
+   "district": "Cleveland"
+  },
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "In the Cleveland District, nonlabor cost pressures have remained robust for the eleventh consecutive reporting period [B:beigebook-2026-10:p022:000:e8308000][B:beigebook-2026-10:p021:001:82fe1a56].",
+  "answer_labels": "In the Cleveland District, nonlabor cost pressures have remained robust for the eleventh consecutive reporting period [S1][S2].",
+  "citations": [
+   "B:beigebook-2026-10:p022:000:e8308000",
+   "B:beigebook-2026-10:p021:001:82fe1a56"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "nonlabor cost pressures robust consecutive reporting periods",
+    "model_district": "Cleveland",
+    "filter": {
+     "district": "Cleveland"
+    },
+    "filter_source": "user",
+    "elapsed_ms": 40.9,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p022:000:e8308000",
+      "page": 22,
+      "district": "Cleveland",
+      "score": 0.5535
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p021:001:82fe1a56",
+      "page": 21,
+      "district": "Cleveland",
+      "score": 0.4851
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p022:001:5acf45db",
+      "page": 22,
+      "district": "Cleveland",
+      "score": 0.4508
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p022:003:c8b18488",
+      "page": 22,
+      "district": "Cleveland",
+      "score": 0.4482
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p023:006:cfbe4d3d",
+      "page": 23,
+      "district": "Cleveland",
+      "score": 0.4257
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p022:000:e8308000",
+     "B:beigebook-2026-10:p021:001:82fe1a56",
+     "B:beigebook-2026-10:p022:001:5acf45db",
+     "B:beigebook-2026-10:p022:003:c8b18488",
+     "B:beigebook-2026-10:p023:006:cfbe4d3d"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "In the Cleveland District, nonlabor cost pressures have remained robust for the eleventh consecutive reporting period [S1][S2].",
+    "citation_labels": [
+     "S1",
+     "S2"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p022:000:e8308000",
+   "S2": "B:beigebook-2026-10:p021:001:82fe1a56",
+   "S3": "B:beigebook-2026-10:p022:001:5acf45db",
+   "S4": "B:beigebook-2026-10:p022:003:c8b18488",
+   "S5": "B:beigebook-2026-10:p023:006:cfbe4d3d"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p022:000:e8308000",
+   "B:beigebook-2026-10:p021:001:82fe1a56",
+   "B:beigebook-2026-10:p022:001:5acf45db",
+   "B:beigebook-2026-10:p022:003:c8b18488",
+   "B:beigebook-2026-10:p023:006:cfbe4d3d"
+  ],
+  "context": "[B:beigebook-2026-10:p022:000:e8308000 | starter/data/BeigeBook_20261014.pdf | page 22]\n[Cleveland | Prices] Nonlabor cost pressures remained robust for the eleventh consecutive reporting period. Higher fuel costs remained the dominant driver, and several contacts noted that these costs were spilling over into freight, packaging, and petroleum-based materials. Multiple manufacturing, construction, and retail contacts said that tariffs added to upward pressure on raw materials costs, and one builder referred to the combination of high fuel costs and tariffs as a \"double whammy.\"\n\n[B:beigebook-2026-10:p021:001:82fe1a56 | starter/data/BeigeBook_20261014.pdf | page 21]\n[Cleveland | Summary of Economic Activity] Employment levels increased modestly, and wage pressures remained moderate. Nonlabor cost pressures remained robust for the eleventh consecutive period, driven by higher fuel costs and tariffs, and selling prices increased robustly as firms passed along rising input costs.\n\n[B:beigebook-2026-10:p022:001:5acf45db | starter/data/BeigeBook_20261014.pdf | page 22]\n[Cleveland | Prices] Many services contacts cited sharp increases in health insurance premiums, and banking and professional services contacts noted rising costs for software, AI tools, and computer hardware. Looking ahead, contacts expected nonlabor cost pressures to remain robust. Overall, contacts reported robust increases in selling prices in recent weeks, driven by rising input costs.\n\n[B:beigebook-2026-10:p022:003:c8b18488 | starter/data/BeigeBook_20261014.pdf | page 22]\n[Cleveland | Prices] Many contacts across sectors noted that their prices are set annually or by contract, and they anticipated raising prices at upcoming renewals.\n\n[B:beigebook-2026-10:p023:006:cfbe4d3d | starter/data/BeigeBook_20261014.pdf | page 23]\n[Cleveland | Nonfinancial Services] Demand for professional and business services grew robustly in recent weeks, with growth concentrated among accounting and consulting firms. One attorney noted that demand for bankruptcy services increased because of higher interest rates and tariffs. Looking ahead, contacts expected activity to increase modestly, as economic and political uncertainty and higher fuel and goods costs might lead some clients to reduce spending.",
+  "context_chars": 2281,
+  "tokens": {
+   "input": 1590,
+   "output": 80
+  },
+  "cost_usd": 0.000286,
+  "elapsed_ms": 3803.6,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q07",
+  "question": "In the Kansas City District, which costs are driving up manufacturers' input costs?",
+  "user_filter": {
+   "district": "Kansas City"
+  },
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "In the Kansas City District, manufacturers' input costs are being driven up by increases in the costs of aluminum, copper, fuel, and shipping. Additionally, rising diesel prices have intensified margin pressures across the value chain, affecting operations and profitability for some firms [B:beigebook-2026-10:p044:005:2a916b8e][B:beigebook-2026-10:p047:001:daa66846][B:beigebook-2026-10:p044:001:3e691346].",
+  "answer_labels": "In the Kansas City District, manufacturers' input costs are being driven up by increases in the costs of aluminum, copper, fuel, and shipping. Additionally, rising diesel prices have intensified margin pressures across the value chain, affecting operations and profitability for some firms [S1][S2][S3].",
+  "citations": [
+   "B:beigebook-2026-10:p044:005:2a916b8e",
+   "B:beigebook-2026-10:p047:001:daa66846",
+   "B:beigebook-2026-10:p044:001:3e691346"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "manufacturers' input costs",
+    "model_district": "Kansas City",
+    "filter": {
+     "district": "Kansas City"
+    },
+    "filter_source": "user",
+    "elapsed_ms": 48.1,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p044:005:2a916b8e",
+      "page": 44,
+      "district": "Kansas City",
+      "score": 0.4993
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p047:001:daa66846",
+      "page": 47,
+      "district": "Kansas City",
+      "score": 0.4714
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p044:001:3e691346",
+      "page": 44,
+      "district": "Kansas City",
+      "score": 0.461
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p045:006:aad9d9f5",
+      "page": 45,
+      "district": "Kansas City",
+      "score": 0.4375
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p045:007:3fc6bc16",
+      "page": 45,
+      "district": "Kansas City",
+      "score": 0.4346
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p044:005:2a916b8e",
+     "B:beigebook-2026-10:p047:001:daa66846",
+     "B:beigebook-2026-10:p044:001:3e691346",
+     "B:beigebook-2026-10:p045:006:aad9d9f5",
+     "B:beigebook-2026-10:p045:007:3fc6bc16"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "In the Kansas City District, manufacturers' input costs are being driven up by increases in the costs of aluminum, copper, fuel, and shipping. Additionally, rising diesel prices have intensified margin pressures across the value chain, affecting operations and profitability for some firms [S1][S2][S3].",
+    "citation_labels": [
+     "S1",
+     "S2",
+     "S3"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p044:005:2a916b8e",
+   "S2": "B:beigebook-2026-10:p047:001:daa66846",
+   "S3": "B:beigebook-2026-10:p044:001:3e691346",
+   "S4": "B:beigebook-2026-10:p045:006:aad9d9f5",
+   "S5": "B:beigebook-2026-10:p045:007:3fc6bc16"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p044:005:2a916b8e",
+   "B:beigebook-2026-10:p047:001:daa66846",
+   "B:beigebook-2026-10:p044:001:3e691346",
+   "B:beigebook-2026-10:p045:006:aad9d9f5",
+   "B:beigebook-2026-10:p045:007:3fc6bc16"
+  ],
+  "context": "[B:beigebook-2026-10:p044:005:2a916b8e | starter/data/BeigeBook_20261014.pdf | page 44]\n[Kansas City | Prices] Prices increased moderately across the Tenth District. Manufacturing firms noted that increases in the costs of aluminum, copper, and fuel are driving up their input costs. There have also been several reports about increasing shipping costs and delays in receiving inventory. Most firms reported being able to pass the costs on to consumers. Meanwhile, services firms also reported increasing costs, especially for shipping.\n\n[B:beigebook-2026-10:p047:001:daa66846 | starter/data/BeigeBook_20261014.pdf | page 47]\n[Kansas City | Agriculture] A food manufacturer also cited diesel costs as a concern, with higher freight expenses expected to meaningfully affect operations and profitability. Agricultural credit conditions deteriorated gradually. While high cattle prices provided support in some areas, many lenders noted that weakness in the crop sector had a modest negative effect on broader economic conditions.\n\n[B:beigebook-2026-10:p044:001:3e691346 | starter/data/BeigeBook_20261014.pdf | page 44]\n[Kansas City | Summary of Economic Activity] There have been several reports of rising diesel prices and shipping costs, as well as delays in receiving inventory. Most firms reported being able to pass these costs on to consumers. However, services firms reported less ability to increase their selling prices, putting more pressure on profit margins.\n\n[B:beigebook-2026-10:p045:006:aad9d9f5 | starter/data/BeigeBook_20261014.pdf | page 45]\n[Kansas City | Manufacturing and Other Business Activity] Business service contacts noted that increased technology and infrastructure spending was spilling over into consulting, IT, engineering, and other services. The majority of firms within the District noted that higher fuel costs weighed on current orders and sales and expected demand to weaken further if fuel prices remained elevated.\n\n[B:beigebook-2026-10:p045:007:3fc6bc16 | starter/data/BeigeBook_20261014.pdf | page 45]\n[Kansas City | Manufacturing and Other Business Activity] Additionally, several firms reported that rising diesel prices had intensified margin pressures across the value chain, prompting suppliers, distributors, and customers to renegotiate terms in an effort to protect profitability. Activity is expected to increase slightly over the next six months.",
+  "context_chars": 2396,
+  "tokens": {
+   "input": 1606,
+   "output": 114
+  },
+  "cost_usd": 0.000309,
+  "elapsed_ms": 3925.2,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q08",
+  "question": "In the Minneapolis District, what share of firms raised prices to customers in September?",
+  "user_filter": {
+   "district": "Minneapolis"
+  },
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "In the Minneapolis District, more than one-third of firms reported that they increased prices to customers in September, which is about the same share as in the previous report [B:beigebook-2026-10:p041:000:4872f3be].",
+  "answer_labels": "In the Minneapolis District, more than one-third of firms reported that they increased prices to customers in September, which is about the same share as in the previous report [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p041:000:4872f3be"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "share of firms raised prices to customers September",
+    "model_district": "Minneapolis",
+    "filter": {
+     "district": "Minneapolis"
+    },
+    "filter_source": "user",
+    "elapsed_ms": 42.2,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p041:000:4872f3be",
+      "page": 41,
+      "district": "Minneapolis",
+      "score": 0.5858
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p041:001:aaedcdf8",
+      "page": 41,
+      "district": "Minneapolis",
+      "score": 0.4028
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p041:002:f6325faf",
+      "page": 41,
+      "district": "Minneapolis",
+      "score": 0.3939
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p042:005:c119b61d",
+      "page": 42,
+      "district": "Minneapolis",
+      "score": 0.3402
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p042:002:8e55a74d",
+      "page": 42,
+      "district": "Minneapolis",
+      "score": 0.3061
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p041:000:4872f3be",
+     "B:beigebook-2026-10:p041:001:aaedcdf8",
+     "B:beigebook-2026-10:p041:002:f6325faf",
+     "B:beigebook-2026-10:p042:005:c119b61d",
+     "B:beigebook-2026-10:p042:002:8e55a74d"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "In the Minneapolis District, more than one-third of firms reported that they increased prices to customers in September, which is about the same share as in the previous report [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p041:000:4872f3be",
+   "S2": "B:beigebook-2026-10:p041:001:aaedcdf8",
+   "S3": "B:beigebook-2026-10:p041:002:f6325faf",
+   "S4": "B:beigebook-2026-10:p042:005:c119b61d",
+   "S5": "B:beigebook-2026-10:p042:002:8e55a74d"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p041:000:4872f3be",
+   "B:beigebook-2026-10:p041:001:aaedcdf8",
+   "B:beigebook-2026-10:p041:002:f6325faf",
+   "B:beigebook-2026-10:p042:005:c119b61d",
+   "B:beigebook-2026-10:p042:002:8e55a74d"
+  ],
+  "context": "[B:beigebook-2026-10:p041:000:4872f3be | starter/data/BeigeBook_20261014.pdf | page 41]\n[Minneapolis | Prices] Prices increased moderately overall, though input price pressures intensified. In a monthly survey, more than one-third of firms reported that they increased prices to customers in September from the month earlier, about the same share as in the previous report. More than half of respondents reported increases in their nonlabor input prices for the month. Expectations for October were similar for input and final prices.\n\n[B:beigebook-2026-10:p041:001:aaedcdf8 | starter/data/BeigeBook_20261014.pdf | page 41]\n[Minneapolis | Prices] Manufacturing contacts reported strong pricing pressures, particularly for raw materials and transportation. An equipment producer commented, \"We had tried absorbing steel price increases for a few months hoping they would go down or at least stabilize. They continued to increase so we finally did implement a price increase.\" Retail fuel prices increased notably since the last report.\n\n[B:beigebook-2026-10:p041:002:f6325faf | starter/data/BeigeBook_20261014.pdf | page 41]\n[Minneapolis | Prices] Prices received by farmers increased in August from a year earlier for corn, soybeans, wheat, canola, potatoes, hay, and turkeys; prices decreased from a year earlier for pulse crops, cattle, hogs, chicken, eggs, and milk.\n\n[B:beigebook-2026-10:p042:005:c119b61d | starter/data/BeigeBook_20261014.pdf | page 42]\n[Minneapolis | Manufacturing] Manufacturing activity increased moderately since the last report. Industry contacts reported an increase in orders on balance in September compared with the month prior, and month-ahead expectations were net positive. An index of regional manufacturing conditions indicated that activity increased in Minnesota, North Dakota, and South Dakota in September from the previous month.\n\n[B:beigebook-2026-10:p042:002:8e55a74d | starter/data/BeigeBook_20261014.pdf | page 42]\n[Minneapolis | Construction and Real Estate] Construction rose modestly since the last report. Among several dozen firms, more reported recent revenue increases than decreases. But there was widespread concern over high and rising costs. A Wisconsin architecture firm said it had several clients \"that cannot move ahead\" due to \"uncertainty and increased costs caused by tariffs and inflation.\" Overall, firms expected revenue to increase modestly in the coming month.",
+  "context_chars": 2428,
+  "tokens": {
+   "input": 1627,
+   "output": 87
+  },
+  "cost_usd": 0.000296,
+  "elapsed_ms": 3523.4,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q09",
+  "question": "By how much have diesel prices risen for a regional grocery chain in the Richmond District, and what striking consequence did it describe?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "In the Richmond District, a regional grocery chain reported that diesel prices have risen thirty percent since last year. This increase has led to the striking consequence that it now costs more to transport a head of lettuce from California than the cost of the lettuce itself, while the grocer faces extreme customer price sensitivity and cannot pass along these rising transportation costs [B:beigebook-2026-10:p026:006:c5898989].",
+  "answer_labels": "In the Richmond District, a regional grocery chain reported that diesel prices have risen thirty percent since last year. This increase has led to the striking consequence that it now costs more to transport a head of lettuce from California than the cost of the lettuce itself, while the grocer faces extreme customer price sensitivity and cannot pass along these rising transportation costs [S4].",
+  "citations": [
+   "B:beigebook-2026-10:p026:006:c5898989"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "diesel prices regional grocery chain Richmond District",
+    "model_district": null,
+    "filter": null,
+    "filter_source": null,
+    "elapsed_ms": 42.0,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p006:001:65ae302a",
+      "page": 6,
+      "district": "National",
+      "score": 0.5748
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p045:007:3fc6bc16",
+      "page": 45,
+      "district": "Kansas City",
+      "score": 0.5635
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p033:000:2749d4ee",
+      "page": 33,
+      "district": "Chicago",
+      "score": 0.5571
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p026:006:c5898989",
+      "page": 26,
+      "district": "Richmond",
+      "score": 0.526
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p053:001:4adbdc6a",
+      "page": 53,
+      "district": "San Francisco",
+      "score": 0.5231
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p006:001:65ae302a",
+     "B:beigebook-2026-10:p045:007:3fc6bc16",
+     "B:beigebook-2026-10:p033:000:2749d4ee",
+     "B:beigebook-2026-10:p026:006:c5898989",
+     "B:beigebook-2026-10:p053:001:4adbdc6a"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "In the Richmond District, a regional grocery chain reported that diesel prices have risen thirty percent since last year. This increase has led to the striking consequence that it now costs more to transport a head of lettuce from California than the cost of the lettuce itself, while the grocer faces extreme customer price sensitivity and cannot pass along these rising transportation costs [S4].",
+    "citation_labels": [
+     "S4"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p006:001:65ae302a",
+   "S2": "B:beigebook-2026-10:p045:007:3fc6bc16",
+   "S3": "B:beigebook-2026-10:p033:000:2749d4ee",
+   "S4": "B:beigebook-2026-10:p026:006:c5898989",
+   "S5": "B:beigebook-2026-10:p053:001:4adbdc6a"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p006:001:65ae302a",
+   "B:beigebook-2026-10:p045:007:3fc6bc16",
+   "B:beigebook-2026-10:p033:000:2749d4ee",
+   "B:beigebook-2026-10:p026:006:c5898989",
+   "B:beigebook-2026-10:p053:001:4adbdc6a"
+  ],
+  "context": "[B:beigebook-2026-10:p006:001:65ae302a | starter/data/BeigeBook_20261014.pdf | page 6]\n[National | Prices] Firms reported elevated diesel prices and noted that fuel surcharges were passing on increased costs throughout the supply chain. Contacts in multiple Districts also noted continued price pressure from other commodities, tariffs, and insurance. Consumer-facing firms noted tighter profit margins as price-sensitive customers continue to resist price hikes.\n\n[B:beigebook-2026-10:p045:007:3fc6bc16 | starter/data/BeigeBook_20261014.pdf | page 45]\n[Kansas City | Manufacturing and Other Business Activity] Additionally, several firms reported that rising diesel prices had intensified margin pressures across the value chain, prompting suppliers, distributors, and customers to renegotiate terms in an effort to protect profitability. Activity is expected to increase slightly over the next six months.\n\n[B:beigebook-2026-10:p033:000:2749d4ee | starter/data/BeigeBook_20261014.pdf | page 33]\n[Chicago | Prices] noted that higher diesel prices were largely being passed on to shippers via surcharges. Consumer prices rose moderately.\n\n[B:beigebook-2026-10:p026:006:c5898989 | starter/data/BeigeBook_20261014.pdf | page 26]\n[Richmond | Retail, Travel, and Tourism] A regional grocery chain noted that with diesel prices rising thirty percent since last year, they now pay more to transport a head of lettuce from California than the cost of the lettuce itself. At the same time, the grocer noted extreme customer price sensitivity and an inability to pass along those rising transportation costs. Hotel occupancy levels across the District continued to benefit from a post-Covid shift to spending on experiences.\n\n[B:beigebook-2026-10:p053:001:4adbdc6a | starter/data/BeigeBook_20261014.pdf | page 53]\n[San Francisco | Prices] Prices rose moderately and at a faster pace than in the prior reporting period. Elevated prices for diesel and other fuels pushed up transportation and freight costs for businesses across the District. Contacts in several sectors, including manufacturing, passed the increased costs on to their customers. One manufacturer reported that every material purchased in recent weeks carried a freight surcharge.",
+  "context_chars": 2236,
+  "tokens": {
+   "input": 1563,
+   "output": 117
+  },
+  "cost_usd": 0.000305,
+  "elapsed_ms": 3730.2,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q10",
+  "question": "Why is it hard for New England employers to hire for specialized legal, accounting and insurance positions?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "New England employers are struggling to hire for specialized legal, accounting, and insurance positions because these roles are increasingly dominated by individuals nearing or entering retirement, leading to a shortage of available candidates [B:beigebook-2026-10:p011:001:10748ea4].",
+  "answer_labels": "New England employers are struggling to hire for specialized legal, accounting, and insurance positions because these roles are increasingly dominated by individuals nearing or entering retirement, leading to a shortage of available candidates [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p011:001:10748ea4"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "New England employers hiring specialized legal accounting insurance positions",
+    "model_district": "Boston",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 45.3,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p011:001:10748ea4",
+      "page": 11,
+      "district": "Boston",
+      "score": 0.4203
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p048:002:0b84c88d",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.3989
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p028:004:5cbfb539",
+      "page": 28,
+      "district": "Atlanta",
+      "score": 0.3417
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p013:004:f809947b",
+      "page": 13,
+      "district": "New York",
+      "score": 0.3403
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p009:002:04caa695",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.323
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p011:001:10748ea4",
+     "B:beigebook-2026-10:p048:002:0b84c88d",
+     "B:beigebook-2026-10:p028:004:5cbfb539",
+     "B:beigebook-2026-10:p013:004:f809947b",
+     "B:beigebook-2026-10:p009:002:04caa695"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "New England employers are struggling to hire for specialized legal, accounting, and insurance positions because these roles are increasingly dominated by individuals nearing or entering retirement, leading to a shortage of available candidates [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p011:001:10748ea4",
+   "S2": "B:beigebook-2026-10:p048:002:0b84c88d",
+   "S3": "B:beigebook-2026-10:p028:004:5cbfb539",
+   "S4": "B:beigebook-2026-10:p013:004:f809947b",
+   "S5": "B:beigebook-2026-10:p009:002:04caa695"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p011:001:10748ea4",
+   "B:beigebook-2026-10:p048:002:0b84c88d",
+   "B:beigebook-2026-10:p028:004:5cbfb539",
+   "B:beigebook-2026-10:p013:004:f809947b",
+   "B:beigebook-2026-10:p009:002:04caa695"
+  ],
+  "context": "[B:beigebook-2026-10:p011:001:10748ea4 | starter/data/BeigeBook_20261014.pdf | page 11]\n[Boston | Nonfinancial Services] Staffing contacts noted that employers struggled to find candidates for specialized jobs in law, accounting, and insurance, as those roles are dominated by people nearing or entering retirement. Contacts expected modest to moderate growth in demand for their services going forward and felt that uncertainty had decreased compared with two months ago.\n\n[B:beigebook-2026-10:p048:002:0b84c88d | starter/data/BeigeBook_20261014.pdf | page 48]\n[Dallas | Labor Markets] One staffing firm said they hired new recruiters to help manage their AI expansion process—citing the example of having AI agents conduct more than 180 hours of interviews in a two-day period and needing workers to review and make decisions. One accounting contact noted that some large accounting firms are delaying new employment contracts because they may not need as many entry-level employees as initially anticipated, partly due to efficiency gains from AI.\n\n[B:beigebook-2026-10:p028:004:5cbfb539 | starter/data/BeigeBook_20261014.pdf | page 28]\n[Atlanta | Labor Markets] Many contacts reported escalating costs in employer-offered benefits and insurance, much of which were being passed on to employees.\n\n[B:beigebook-2026-10:p013:004:f809947b | starter/data/BeigeBook_20261014.pdf | page 13]\n[New York | Labor Markets] However, a childcare provider noted a readily available supply of applicants. Some larger organizations were beginning to cut selected jobs or hold off on hiring as they integrated AI into their operations, and demand for marketing roles softened. There were no reports of large-scale layoffs in the region, though a few smaller firms reported cutting staff in response to lost business and rising costs.\n\n[B:beigebook-2026-10:p009:002:04caa695 | starter/data/BeigeBook_20261014.pdf | page 9]\n[Boston | Labor Markets] Employment rose slightly on average. Head counts were mostly unchanged in retail, tourism, and financial services, while manufacturing employment edged up overall. Hiring picked up a bit, reflecting both permanent and temporary placements, but some employers were deterred by rising labor costs, particularly medical benefits. Labor demand was healthy for roles in professional services, insurance, law, and accounting, and weaker for health care and IT.",
+  "context_chars": 2387,
+  "tokens": {
+   "input": 1587,
+   "output": 91
+  },
+  "cost_usd": 0.000293,
+  "elapsed_ms": 3239.5,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q11",
+  "question": "In the Atlanta District, what size of annual wage increases did most contacts report?",
+  "user_filter": {
+   "district": "Atlanta"
+  },
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "Most contacts in the Atlanta District reported moderate annual wage increases in the 2 to 3 percent range [B:beigebook-2026-10:p028:003:9ed99b49].",
+  "answer_labels": "Most contacts in the Atlanta District reported moderate annual wage increases in the 2 to 3 percent range [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p028:003:9ed99b49"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "annual wage increases",
+    "model_district": "Atlanta",
+    "filter": {
+     "district": "Atlanta"
+    },
+    "filter_source": "user",
+    "elapsed_ms": 47.6,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p028:003:9ed99b49",
+      "page": 28,
+      "district": "Atlanta",
+      "score": 0.568
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p028:004:5cbfb539",
+      "page": 28,
+      "district": "Atlanta",
+      "score": 0.4705
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p029:000:acd32439",
+      "page": 29,
+      "district": "Atlanta",
+      "score": 0.3834
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p028:001:75822c88",
+      "page": 28,
+      "district": "Atlanta",
+      "score": 0.3687
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p031:002:1f885c46",
+      "page": 31,
+      "district": "Atlanta",
+      "score": 0.3538
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p028:003:9ed99b49",
+     "B:beigebook-2026-10:p028:004:5cbfb539",
+     "B:beigebook-2026-10:p029:000:acd32439",
+     "B:beigebook-2026-10:p028:001:75822c88",
+     "B:beigebook-2026-10:p031:002:1f885c46"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "Most contacts in the Atlanta District reported moderate annual wage increases in the 2 to 3 percent range [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p028:003:9ed99b49",
+   "S2": "B:beigebook-2026-10:p028:004:5cbfb539",
+   "S3": "B:beigebook-2026-10:p029:000:acd32439",
+   "S4": "B:beigebook-2026-10:p028:001:75822c88",
+   "S5": "B:beigebook-2026-10:p031:002:1f885c46"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p028:003:9ed99b49",
+   "B:beigebook-2026-10:p028:004:5cbfb539",
+   "B:beigebook-2026-10:p029:000:acd32439",
+   "B:beigebook-2026-10:p028:001:75822c88",
+   "B:beigebook-2026-10:p031:002:1f885c46"
+  ],
+  "context": "[B:beigebook-2026-10:p028:003:9ed99b49 | starter/data/BeigeBook_20261014.pdf | page 28]\n[Atlanta | Labor Markets] Similar to previous reports, most firms did not expect these efforts to lead to significant workforce reductions in the near term. Most contacts reported moderate annual wage increases in the 2 to 3 percent range. However, some contacts noted continued wage pressure for skilled roles, along with concerns among their employees that cost-of-living increases were insufficient in the current inflationary environment.\n\n[B:beigebook-2026-10:p028:004:5cbfb539 | starter/data/BeigeBook_20261014.pdf | page 28]\n[Atlanta | Labor Markets] Many contacts reported escalating costs in employer-offered benefits and insurance, much of which were being passed on to employees.\n\n[B:beigebook-2026-10:p029:000:acd32439 | starter/data/BeigeBook_20261014.pdf | page 29]\n[Atlanta | Prices] continued to rise. Firms that have received tariff refunds most often used them to offset other operating costs. Weakening pricing power for retailers persisted, and most reported limited, \"surgical\" price increases.\n\n[B:beigebook-2026-10:p028:001:75822c88 | starter/data/BeigeBook_20261014.pdf | page 28]\n[Atlanta | Summary of Economic Activity] Energy sector activity rose moderately, and agriculture conditions were mixed.\n\n[B:beigebook-2026-10:p031:002:1f885c46 | starter/data/BeigeBook_20261014.pdf | page 31]\n[Atlanta | Agriculture] Robust demand for beef has propped up dairy farmers, who increased calf production to sell to cattle operations.",
+  "context_chars": 1538,
+  "tokens": {
+   "input": 1459,
+   "output": 69
+  },
+  "cost_usd": 0.00026,
+  "elapsed_ms": 2602.1,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q12",
+  "question": "How large is the upcoming wage increase planned by a Philadelphia District retailer, and what reasons did it give?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "A Philadelphia District retailer plans a wage increase of 4 percent, up from 2.5 percent last year. The reasons given for this increase include the high cost of living, weaker labor availability, and an expectation of higher-than-usual wage increases by competitors. [B:beigebook-2026-10:p017:006:c4d67cc5]",
+  "answer_labels": "A Philadelphia District retailer plans a wage increase of 4 percent, up from 2.5 percent last year. The reasons given for this increase include the high cost of living, weaker labor availability, and an expectation of higher-than-usual wage increases by competitors. [S1]",
+  "citations": [
+   "B:beigebook-2026-10:p017:006:c4d67cc5"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "wage increase Philadelphia District retailer reasons",
+    "model_district": "Philadelphia",
+    "filter": {
+     "district": "Philadelphia"
+    },
+    "filter_source": "model",
+    "elapsed_ms": 45.0,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p017:006:c4d67cc5",
+      "page": 17,
+      "district": "Philadelphia",
+      "score": 0.7555
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p017:003:a956cbeb",
+      "page": 17,
+      "district": "Philadelphia",
+      "score": 0.6188
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p017:000:6653af6d",
+      "page": 17,
+      "district": "Philadelphia",
+      "score": 0.6168
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p017:005:a396ec8d",
+      "page": 17,
+      "district": "Philadelphia",
+      "score": 0.5874
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p017:001:d234eaa6",
+      "page": 17,
+      "district": "Philadelphia",
+      "score": 0.5696
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p017:006:c4d67cc5",
+     "B:beigebook-2026-10:p017:003:a956cbeb",
+     "B:beigebook-2026-10:p017:000:6653af6d",
+     "B:beigebook-2026-10:p017:005:a396ec8d",
+     "B:beigebook-2026-10:p017:001:d234eaa6"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "A Philadelphia District retailer plans a wage increase of 4 percent, up from 2.5 percent last year. The reasons given for this increase include the high cost of living, weaker labor availability, and an expectation of higher-than-usual wage increases by competitors.",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   },
+   {
+    "event": "citation_appended",
+    "labels": [
+     "S1"
+    ]
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p017:006:c4d67cc5",
+   "S2": "B:beigebook-2026-10:p017:003:a956cbeb",
+   "S3": "B:beigebook-2026-10:p017:000:6653af6d",
+   "S4": "B:beigebook-2026-10:p017:005:a396ec8d",
+   "S5": "B:beigebook-2026-10:p017:001:d234eaa6"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p017:006:c4d67cc5",
+   "B:beigebook-2026-10:p017:003:a956cbeb",
+   "B:beigebook-2026-10:p017:000:6653af6d",
+   "B:beigebook-2026-10:p017:005:a396ec8d",
+   "B:beigebook-2026-10:p017:001:d234eaa6"
+  ],
+  "context": "[B:beigebook-2026-10:p017:006:c4d67cc5 | starter/data/BeigeBook_20261014.pdf | page 17]\n[Philadelphia | Labor Markets] A retailer shared plans for an upcoming wage increase of 4 percent (up from 2.5 percent last year) owing to the high cost of living, weaker labor availability, and an expectation of higher-than-usual wage increases by\n\n[B:beigebook-2026-10:p017:003:a956cbeb | starter/data/BeigeBook_20261014.pdf | page 17]\n[Philadelphia | Labor Markets] Employment rose modestly during the period, up from a slight increase in the prior period. On balance, nonmanufacturing firms reported modest increases in both full- and part-time employment, and manufacturing firms also reported a modest rise in total employment. Overall, staffing contacts reported mostly steady demand—up from a year ago but still muted by historical standards. Most contacts reported little trouble with labor supply and low employee turnover.\n\n[B:beigebook-2026-10:p017:000:6653af6d | starter/data/BeigeBook_20261014.pdf | page 17]\n[Philadelphia | Summary of Economic Activity] Economic activity in the Third District grew slightly, after picking up to a modest pace of growth last period. Employment rose modestly, as both manufacturing and nonmanufacturing firms reported increased hiring. Wage inflation remained steady at a modest pace, although some firms reported upward wage pressures. Prices rose moderately after slowing to a modest pace last period.\n\n[B:beigebook-2026-10:p017:005:a396ec8d | starter/data/BeigeBook_20261014.pdf | page 17]\n[Philadelphia | Labor Markets] A manufacturing-focused staffing contact noted increased demand for high- and low-skilled workers in recent months, with some firms becoming less selective in their hiring and more willing to train new employees. Wage inflation remained largely unchanged at a modest pace overall; however, some contacts reported pockets of higher wage pressures over the period.\n\n[B:beigebook-2026-10:p017:001:d234eaa6 | starter/data/BeigeBook_20261014.pdf | page 17]\n[Philadelphia | Summary of Economic Activity] Firms reported increased cost pressures and that they raised prices to offset these higher costs, where possible. Manufacturing activity rose moderately, slightly slower than the prior period's strong growth. Nonmanufacturing activity was little changed, down from a slight increase. Retailers, both auto and nonauto, reported slight declines in sales. Tourism continued to grow at a moderate pace.",
+  "context_chars": 2455,
+  "tokens": {
+   "input": 1611,
+   "output": 101
+  },
+  "cost_usd": 0.000302,
+  "elapsed_ms": 3294.6,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q13",
+  "question": "Why are harvest costs expected to rise for farmers in the Seventh District?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "Harvest costs for farmers in the Seventh District (Chicago) are expected to rise due to heavy rains that slowed the harvest and are anticipated to lower yields for corn and soybeans. Additionally, farmers are expected to incur higher fuel costs to dry the harvested bushels, exacerbated by high energy prices [B:beigebook-2026-10:p034:004:fedc5985].",
+  "answer_labels": "Harvest costs for farmers in the Seventh District (Chicago) are expected to rise due to heavy rains that slowed the harvest and are anticipated to lower yields for corn and soybeans. Additionally, farmers are expected to incur higher fuel costs to dry the harvested bushels, exacerbated by high energy prices [S4].",
+  "citations": [
+   "B:beigebook-2026-10:p034:004:fedc5985"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "harvest costs rise farmers Seventh District",
+    "model_district": null,
+    "filter": null,
+    "filter_source": null,
+    "elapsed_ms": 51.5,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p047:000:2fbe5f96",
+      "page": 47,
+      "district": "Kansas City",
+      "score": 0.574
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p041:002:f6325faf",
+      "page": 41,
+      "district": "Minneapolis",
+      "score": 0.5648
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p051:000:14f34aeb",
+      "page": 51,
+      "district": "Dallas",
+      "score": 0.4947
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p034:004:fedc5985",
+      "page": 34,
+      "district": "Chicago",
+      "score": 0.4818
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p032:005:d3c87723",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.4548
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p047:000:2fbe5f96",
+     "B:beigebook-2026-10:p041:002:f6325faf",
+     "B:beigebook-2026-10:p051:000:14f34aeb",
+     "B:beigebook-2026-10:p034:004:fedc5985",
+     "B:beigebook-2026-10:p032:005:d3c87723"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "harvest costs rise farmers Seventh District",
+    "model_district": "Chicago",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 40.3,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p047:000:2fbe5f96",
+      "page": 47,
+      "district": "Kansas City",
+      "score": 0.574
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p041:002:f6325faf",
+      "page": 41,
+      "district": "Minneapolis",
+      "score": 0.5648
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p051:000:14f34aeb",
+      "page": 51,
+      "district": "Dallas",
+      "score": 0.4947
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p034:004:fedc5985",
+      "page": 34,
+      "district": "Chicago",
+      "score": 0.4818
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p032:005:d3c87723",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.4548
+     }
+    ],
+    "new_context_ids": [],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "Harvest costs for farmers in the Seventh District (Chicago) are expected to rise due to heavy rains that slowed the harvest and are anticipated to lower yields for corn and soybeans. Additionally, farmers are expected to incur higher fuel costs to dry the harvested bushels, exacerbated by high energy prices [S4].",
+    "citation_labels": [
+     "S4"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 2,
+  "llm_calls": 3,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p047:000:2fbe5f96",
+   "S2": "B:beigebook-2026-10:p041:002:f6325faf",
+   "S3": "B:beigebook-2026-10:p051:000:14f34aeb",
+   "S4": "B:beigebook-2026-10:p034:004:fedc5985",
+   "S5": "B:beigebook-2026-10:p032:005:d3c87723"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p047:000:2fbe5f96",
+   "B:beigebook-2026-10:p041:002:f6325faf",
+   "B:beigebook-2026-10:p051:000:14f34aeb",
+   "B:beigebook-2026-10:p034:004:fedc5985",
+   "B:beigebook-2026-10:p032:005:d3c87723"
+  ],
+  "context": "[B:beigebook-2026-10:p047:000:2fbe5f96 | starter/data/BeigeBook_20261014.pdf | page 47]\n[Kansas City | Agriculture] Agricultural economic conditions in the Tenth District were subdued alongside volatile commodity prices and increased input costs. Crop prices rose notably in early September and stayed above year-ago levels, but market conditions were volatile, and a surge in diesel prices and severe drought in some areas raised concerns about costs and revenue.\n\n[B:beigebook-2026-10:p041:002:f6325faf | starter/data/BeigeBook_20261014.pdf | page 41]\n[Minneapolis | Prices] Prices received by farmers increased in August from a year earlier for corn, soybeans, wheat, canola, potatoes, hay, and turkeys; prices decreased from a year earlier for pulse crops, cattle, hogs, chicken, eggs, and milk.\n\n[B:beigebook-2026-10:p051:000:14f34aeb | starter/data/BeigeBook_20261014.pdf | page 51]\n[Dallas | Agriculture] production prospects and solid grain prices, though there is concern over high input costs— fertilizer prices are up 10 to 25 percent from a year ago and diesel prices have nearly doubled. Cattle prices remained elevated amid continued tight supplies, but they declined over the reporting period and are lower than a year ago.\n\n[B:beigebook-2026-10:p034:004:fedc5985 | starter/data/BeigeBook_20261014.pdf | page 34]\n[Chicago | Agriculture] Expectations for 2026 District farm income edged down over the reporting period, which included the start of harvest. Heavy rains in much of the District slowed the harvest and were expected to lower yields for corn and, especially, soybeans. Farmers also were expected to spend more on fuel to dry bushels, compounding the effect of high energy prices on the costs of harvest. Corn and soybean prices again moved higher, with reports of premiums for current deliveries.\n\n[B:beigebook-2026-10:p032:005:d3c87723 | starter/data/BeigeBook_20261014.pdf | page 32]\n[Chicago | Prices] Prices rose moderately overall in late August and September, and contacts expected a similar growth rate over the next 12 months. There was a moderate increase in producer prices on net. Nonlabor input costs also grew moderately, with contacts reporting price increases across a variety of categories. Raw materials and equipment costs rose, notably for lumber and metals.",
+  "context_chars": 2303,
+  "tokens": {
+   "input": 2678,
+   "output": 131
+  },
+  "cost_usd": 0.000403,
+  "elapsed_ms": 5155.9,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q14",
+  "question": "In the New York District, what was driving demand for industrial real estate?",
+  "user_filter": {
+   "district": "New York"
+  },
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "Demand for industrial real estate in the New York District was largely driven by data centers, which contributed to strong industrial demand [B:beigebook-2026-10:p015:004:7bccb515].",
+  "answer_labels": "Demand for industrial real estate in the New York District was largely driven by data centers, which contributed to strong industrial demand [S3].",
+  "citations": [
+   "B:beigebook-2026-10:p015:004:7bccb515"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "demand for industrial real estate",
+    "model_district": "New York",
+    "filter": {
+     "district": "New York"
+    },
+    "filter_source": "user",
+    "elapsed_ms": 35.4,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p015:002:2dfffd80",
+      "page": 15,
+      "district": "New York",
+      "score": 0.4523
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p015:003:2e980cb9",
+      "page": 15,
+      "district": "New York",
+      "score": 0.4491
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p015:004:7bccb515",
+      "page": 15,
+      "district": "New York",
+      "score": 0.4051
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p014:004:99ab6685",
+      "page": 14,
+      "district": "New York",
+      "score": 0.3651
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p013:001:7c60aff6",
+      "page": 13,
+      "district": "New York",
+      "score": 0.3248
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p015:002:2dfffd80",
+     "B:beigebook-2026-10:p015:003:2e980cb9",
+     "B:beigebook-2026-10:p015:004:7bccb515",
+     "B:beigebook-2026-10:p014:004:99ab6685",
+     "B:beigebook-2026-10:p013:001:7c60aff6"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "Demand for industrial real estate in the New York District was largely driven by data centers, which contributed to strong industrial demand [S3].",
+    "citation_labels": [
+     "S3"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p015:002:2dfffd80",
+   "S2": "B:beigebook-2026-10:p015:003:2e980cb9",
+   "S3": "B:beigebook-2026-10:p015:004:7bccb515",
+   "S4": "B:beigebook-2026-10:p014:004:99ab6685",
+   "S5": "B:beigebook-2026-10:p013:001:7c60aff6"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p015:002:2dfffd80",
+   "B:beigebook-2026-10:p015:003:2e980cb9",
+   "B:beigebook-2026-10:p015:004:7bccb515",
+   "B:beigebook-2026-10:p014:004:99ab6685",
+   "B:beigebook-2026-10:p013:001:7c60aff6"
+  ],
+  "context": "[B:beigebook-2026-10:p015:002:2dfffd80 | starter/data/BeigeBook_20261014.pdf | page 15]\n[New York | Real Estate and Construction] Housing market activity was little changed. Persistently low inventory continued to limit sales and push prices higher, though listings continued to edge up in most of the District. Still, with mortgage rates rising again, lock-in remained a key issue holding back homeowners from moving. In New York City, activity was concentrated at the high end as buyers who had been waiting for lower rates began to capitulate, and inventory fell slightly.\n\n[B:beigebook-2026-10:p015:003:2e980cb9 | starter/data/BeigeBook_20261014.pdf | page 15]\n[New York | Real Estate and Construction] Rental markets strengthened, particularly in New York City where rents remained near historic highs. A New York City real estate contact noted that rising mortgage rates typically push more households into the rental market and expected rents to remain elevated for some time. Commercial real estate markets remained strong, led by a hot office leasing market in New York City.\n\n[B:beigebook-2026-10:p015:004:7bccb515 | starter/data/BeigeBook_20261014.pdf | page 15]\n[New York | Real Estate and Construction] Manhattan office leasing continued at a brisk pace, with bidding wars for top-tier space. Multiple contacts reported that sales of commercial properties slowed in recent weeks, as rising interest rates reduced demand. Industrial demand remained strong, largely driven by data centers. Construction activity held steady after several months of strong growth.\n\n[B:beigebook-2026-10:p014:004:99ab6685 | starter/data/BeigeBook_20261014.pdf | page 14]\n[New York | Manufacturing and Distribution] Manufacturing activity grew moderately following a solid pickup last period. An industrial equipment manufacturer reported a surge in semiconductor, electronics, government, and aerospace orders, though demand in other segments declined. Delivery times lengthened, and supply availability continued to worsen.\n\n[B:beigebook-2026-10:p013:001:7c60aff6 | starter/data/BeigeBook_20261014.pdf | page 13]\n[New York | Summary of Economic Activity] Selling price increases picked up to the high end of the moderate range, while input prices continued to rise strongly. Consumer spending edged up, buoyed by higher-income households. Housing market activity was little changed, as persistently tight supply continued to limit sales and push prices higher. Businesses generally expected little improvement in the months ahead, although manufacturers were more optimistic.",
+  "context_chars": 2568,
+  "tokens": {
+   "input": 1648,
+   "output": 76
+  },
+  "cost_usd": 0.000293,
+  "elapsed_ms": 4532.0,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q15",
+  "question": "Why did some fuel buyers in rural Colorado take delivery of shipments early?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "Some fuel buyers in rural Colorado took early delivery of shipments due to intermittent diesel shortages at gas stations, which were exacerbated by the ongoing Middle Eastern energy supply shock. This proactive measure was taken to ensure fuel availability amid these shortages [B:beigebook-2026-10:p046:007:668155d8].",
+  "answer_labels": "Some fuel buyers in rural Colorado took early delivery of shipments due to intermittent diesel shortages at gas stations, which were exacerbated by the ongoing Middle Eastern energy supply shock. This proactive measure was taken to ensure fuel availability amid these shortages [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p046:007:668155d8"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "fuel buyers rural Colorado early shipments",
+    "model_district": null,
+    "filter": null,
+    "filter_source": null,
+    "elapsed_ms": 48.6,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p046:007:668155d8",
+      "page": 46,
+      "district": "Kansas City",
+      "score": 0.6883
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p033:000:2749d4ee",
+      "page": 33,
+      "district": "Chicago",
+      "score": 0.4805
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p026:006:c5898989",
+      "page": 26,
+      "district": "Richmond",
+      "score": 0.4568
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p050:004:c9751263",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.4539
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p026:004:ca5abb7f",
+      "page": 26,
+      "district": "Richmond",
+      "score": 0.4502
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p046:007:668155d8",
+     "B:beigebook-2026-10:p033:000:2749d4ee",
+     "B:beigebook-2026-10:p026:006:c5898989",
+     "B:beigebook-2026-10:p050:004:c9751263",
+     "B:beigebook-2026-10:p026:004:ca5abb7f"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "Some fuel buyers in rural Colorado took early delivery of shipments due to intermittent diesel shortages at gas stations, which were exacerbated by the ongoing Middle Eastern energy supply shock. This proactive measure was taken to ensure fuel availability amid these shortages [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p046:007:668155d8",
+   "S2": "B:beigebook-2026-10:p033:000:2749d4ee",
+   "S3": "B:beigebook-2026-10:p026:006:c5898989",
+   "S4": "B:beigebook-2026-10:p050:004:c9751263",
+   "S5": "B:beigebook-2026-10:p026:004:ca5abb7f"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p046:007:668155d8",
+   "B:beigebook-2026-10:p033:000:2749d4ee",
+   "B:beigebook-2026-10:p026:006:c5898989",
+   "B:beigebook-2026-10:p050:004:c9751263",
+   "B:beigebook-2026-10:p026:004:ca5abb7f"
+  ],
+  "context": "[B:beigebook-2026-10:p046:007:668155d8 | starter/data/BeigeBook_20261014.pdf | page 46]\n[Kansas City | Energy] Amid the ongoing Middle Eastern energy supply shock, several regional contacts in rural Colorado reported intermittent diesel shortages at gas stations in recent weeks, causing some buyers to take early delivery of fuel shipments to ensure availability. Looking ahead, oil and gas firms expect activity and investment to increase further in the next six months.\n\n[B:beigebook-2026-10:p033:000:2749d4ee | starter/data/BeigeBook_20261014.pdf | page 33]\n[Chicago | Prices] noted that higher diesel prices were largely being passed on to shippers via surcharges. Consumer prices rose moderately.\n\n[B:beigebook-2026-10:p026:006:c5898989 | starter/data/BeigeBook_20261014.pdf | page 26]\n[Richmond | Retail, Travel, and Tourism] A regional grocery chain noted that with diesel prices rising thirty percent since last year, they now pay more to transport a head of lettuce from California than the cost of the lettuce itself. At the same time, the grocer noted extreme customer price sensitivity and an inability to pass along those rising transportation costs. Hotel occupancy levels across the District continued to benefit from a post-Covid shift to spending on experiences.\n\n[B:beigebook-2026-10:p050:004:c9751263 | starter/data/BeigeBook_20261014.pdf | page 50]\n[Dallas | Energy] Growth continued in Eleventh District oil and gas activity over the past six weeks, though increases in the rig count were modest. Respondents to the Dallas Fed Energy Survey reported increases in both oil and natural gas production in the third quarter. Contacts noted sharp cost pressures from wages and benefits, fuel, and materials.\n\n[B:beigebook-2026-10:p026:004:ca5abb7f | starter/data/BeigeBook_20261014.pdf | page 26]\n[Richmond | Ports and Transportation] In order to cover the fuel cost increases out of pocket, trucking contacts noted that some carriers have dipped into savings or shifted spending from fleet maintenance, and others have halted purchases of new, fuelefficient trucks that would have improved costs and emissions in the long run.",
+  "context_chars": 2144,
+  "tokens": {
+   "input": 1538,
+   "output": 93
+  },
+  "cost_usd": 0.000287,
+  "elapsed_ms": 3302.5,
+  "split": "dev",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "u01",
+  "question": "What was the unemployment rate in the Boston District in September 2026?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "abstain",
+  "answer": "The unemployment rate in the Boston District for September 2026 is not specified in the Beige Book.",
+  "answer_labels": "The unemployment rate in the Boston District for September 2026 is not specified in the Beige Book.",
+  "citations": [],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "unemployment rate September 2026",
+    "model_district": "Boston",
+    "filter": {
+     "district": "Boston"
+    },
+    "filter_source": "model",
+    "elapsed_ms": 40.4,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p009:004:5fcb3aa4",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.4628
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p009:003:f68b8862",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.4341
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p012:002:72951698",
+      "page": 12,
+      "district": "Boston",
+      "score": 0.4258
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p009:001:32838225",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.3753
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p009:002:04caa695",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.3629
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p009:004:5fcb3aa4",
+     "B:beigebook-2026-10:p009:003:f68b8862",
+     "B:beigebook-2026-10:p012:002:72951698",
+     "B:beigebook-2026-10:p009:001:32838225",
+     "B:beigebook-2026-10:p009:002:04caa695"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": true,
+    "answer_raw": "The unemployment rate in the Boston District for September 2026 is not specified in the Beige Book.",
+    "citation_labels": [],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p009:004:5fcb3aa4",
+   "S2": "B:beigebook-2026-10:p009:003:f68b8862",
+   "S3": "B:beigebook-2026-10:p012:002:72951698",
+   "S4": "B:beigebook-2026-10:p009:001:32838225",
+   "S5": "B:beigebook-2026-10:p009:002:04caa695"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p009:004:5fcb3aa4",
+   "B:beigebook-2026-10:p009:003:f68b8862",
+   "B:beigebook-2026-10:p012:002:72951698",
+   "B:beigebook-2026-10:p009:001:32838225",
+   "B:beigebook-2026-10:p009:002:04caa695"
+  ],
+  "context": "[B:beigebook-2026-10:p009:004:5fcb3aa4 | starter/data/BeigeBook_20261014.pdf | page 9]\n[Boston | Labor Markets] Staffing contacts said wage increases often fell short of inflation, motivating more workers to seek new jobs. The outlook called for small further increases in hiring going forward.\n\n[B:beigebook-2026-10:p009:003:f68b8862 | starter/data/BeigeBook_20261014.pdf | page 9]\n[Boston | Labor Markets] Labor supply appeared mostly stable, but contacts pointed to workforce shortages in health care, childcare and human services, owing to increased immigration enforcement and an aging population. A grocer reported staffing challenges in its trucking and supply-chain operations, leading to increased reliance on third-party providers. Wages rose slightly overall, with isolated premiums for highly skilled talent.\n\n[B:beigebook-2026-10:p012:002:72951698 | starter/data/BeigeBook_20261014.pdf | page 12]\n[Boston | Community Perspectives] Low-income households faced risks of losing Medicaid, SNAP, and other benefits in 2027, given new work requirements and more frequent paperwork. Immigration enforcement also reportedly disrupted families' spending and saving patterns and dampened small business revenues and hiring activity. Small businesses and nonprofits faced mounting financial strain due to inflation and revenue uncertainty.\n\n[B:beigebook-2026-10:p009:001:32838225 | starter/data/BeigeBook_20261014.pdf | page 9]\n[Boston | Summary of Economic Activity] Employment showed small gains on an uptick in hiring, and wage growth was muted. Prices rose modestly on balance. The outlook dimmed somewhat, with widespread concerns about cost pressures on lower-income families, small businesses, and nonprofits, but there was cautious optimism regarding hiring activity and further growth in manufacturing and nonfinancial services.\n\n[B:beigebook-2026-10:p009:002:04caa695 | starter/data/BeigeBook_20261014.pdf | page 9]\n[Boston | Labor Markets] Employment rose slightly on average. Head counts were mostly unchanged in retail, tourism, and financial services, while manufacturing employment edged up overall. Hiring picked up a bit, reflecting both permanent and temporary placements, but some employers were deterred by rising labor costs, particularly medical benefits. Labor demand was healthy for roles in professional services, insurance, law, and accounting, and weaker for health care and IT.",
+  "context_chars": 2407,
+  "tokens": {
+   "input": 1572,
+   "output": 65
+  },
+  "cost_usd": 0.000275,
+  "elapsed_ms": 2987.1,
+  "split": "dev",
+  "context_hit": null
+ },
+ {
+  "query_id": "u02",
+  "question": "What was the average price per gallon of diesel in the Atlanta District during the reporting period?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "abstain",
+  "answer": "The search did not provide specific information about the average price per gallon of diesel in the Atlanta District during the reporting period.",
+  "answer_labels": "The search did not provide specific information about the average price per gallon of diesel in the Atlanta District during the reporting period.",
+  "citations": [],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "average price per gallon of diesel",
+    "model_district": "Atlanta",
+    "filter": {
+     "district": "Atlanta"
+    },
+    "filter_source": "model",
+    "elapsed_ms": 45.0,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p028:005:7bbfeb43",
+      "page": 28,
+      "district": "Atlanta",
+      "score": 0.2259
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p028:006:75d58990",
+      "page": 28,
+      "district": "Atlanta",
+      "score": 0.1881
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p030:006:8cb2d593",
+      "page": 30,
+      "district": "Atlanta",
+      "score": 0.183
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p030:002:78d8a52d",
+      "page": 30,
+      "district": "Atlanta",
+      "score": 0.1223
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p030:000:d6d17e78",
+      "page": 30,
+      "district": "Atlanta",
+      "score": 0.1041
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p028:005:7bbfeb43",
+     "B:beigebook-2026-10:p028:006:75d58990",
+     "B:beigebook-2026-10:p030:006:8cb2d593",
+     "B:beigebook-2026-10:p030:002:78d8a52d",
+     "B:beigebook-2026-10:p030:000:d6d17e78"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": true,
+    "answer_raw": "The search did not provide specific information about the average price per gallon of diesel in the Atlanta District during the reporting period.",
+    "citation_labels": [],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p028:005:7bbfeb43",
+   "S2": "B:beigebook-2026-10:p028:006:75d58990",
+   "S3": "B:beigebook-2026-10:p030:006:8cb2d593",
+   "S4": "B:beigebook-2026-10:p030:002:78d8a52d",
+   "S5": "B:beigebook-2026-10:p030:000:d6d17e78"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p028:005:7bbfeb43",
+   "B:beigebook-2026-10:p028:006:75d58990",
+   "B:beigebook-2026-10:p030:006:8cb2d593",
+   "B:beigebook-2026-10:p030:002:78d8a52d",
+   "B:beigebook-2026-10:p030:000:d6d17e78"
+  ],
+  "context": "[B:beigebook-2026-10:p028:005:7bbfeb43 | starter/data/BeigeBook_20261014.pdf | page 28]\n[Atlanta | Prices] Price growth remained moderate over the reporting period, with persistent pressure on various input costs. Transportation costs grew notably as diesel prices rose, and demand for rapid delivery of items related to data center projects strained freight and shipping capacity. Wholesalers reported increasing inventory orders to minimize transportation costs or simply absorbing fuel surcharges in their margins.\n\n[B:beigebook-2026-10:p028:006:75d58990 | starter/data/BeigeBook_20261014.pdf | page 28]\n[Atlanta | Prices] Construction inputs, particularly steel and mechanical equipment, saw more frequent upward price adjustments. Auto, liability, and health insurance costs\n\n[B:beigebook-2026-10:p030:006:8cb2d593 | starter/data/BeigeBook_20261014.pdf | page 30]\n[Atlanta | Energy] Energy activity grew moderately over the reporting period. Consumer and industrial demand, particularly for diesel and gasoline, remained solid. However, decreases in global inventories related to the crisis in the Middle East and the conflict in Europe raised concerns about future supply availability. American production remained resilient, but contacts noted that they alone cannot support the demand from both domestic and international consumers.\n\n[B:beigebook-2026-10:p030:002:78d8a52d | starter/data/BeigeBook_20261014.pdf | page 30]\n[Atlanta | Manufacturing] Similarly, a large distillery and brewery reported that demand was flat to slightly down for the year, and that long-term demand forecasts may be shifting downward because of changing consumer preferences and consumption trends, such as the growing use of GLP-1 drugs and alcohol alternatives.\n\n[B:beigebook-2026-10:p030:000:d6d17e78 | starter/data/BeigeBook_20261014.pdf | page 30]\n[Atlanta | Transportation] construction; shipments of residential construction materials and consumer-related freight continued to lag. Freight forwarders reported increased volumes as business inventory levels rose and Asia-to-U.S. trade improved (excluding China). Railroads saw robust intermodal freight volumes and solid increases in total traffic year over year.",
+  "context_chars": 2206,
+  "tokens": {
+   "input": 1526,
+   "output": 68
+  },
+  "cost_usd": 0.00027,
+  "elapsed_ms": 4397.3,
+  "split": "dev",
+  "context_hit": null
+ }
+]

@@ -1,0 +1,140 @@
+[
+ {
+  "query_id": "q01",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p3 About) ghi nguyên văn 'Reports are published eight times per year.' Câu trả lời đúng và đủ."
+ },
+ {
+  "query_id": "q02",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p5): '...is not a commentary on the views of Federal Reserve officials'. Trả lời đúng ý 'không'."
+ },
+ {
+  "query_id": "q03",
+  "answer_grade": 0,
+  "citation_support": [
+   false,
+   false
+  ],
+  "reason": "SAI / HALLUCINATION. Agent search 4 lần với dense, không lần nào lấy được chunk p5 chứa evidence (context không có gold), nhưng vẫn trả lời thay vì từ chối: 'prepared by the Federal Reserve System' (sai, đúng là FRB Philadelphia) và 'cut-off date was September 29, 2026' (ngày bịa, không có trong S1/S8). S1 (p3) chỉ mô tả Beige Book; S8 (p5) là câu disclaimer; cả hai không hỗ trợ khẳng định."
+ },
+ {
+  "query_id": "q04",
+  "answer_grade": 0,
+  "citation_support": [
+   false,
+   false
+  ],
+  "reason": "SAI. Trả lời 'Two … the Chicago District and the St. Louis District'; đúng là 'three' (p5). Dense không đưa chunk p5 vào context sau 4 lượt search; model ghép từ các đoạn 'flat'/'no change' của từng District. S2 (p7) và S5 (p32) chỉ nói Chicago 'flat on balance', không hỗ trợ con số 'two' hay St. Louis."
+ },
+ {
+  "query_id": "q05",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p6 National Prices) hỗ trợ ý chính: diesel giá cao, fuel surcharges chuyển chi phí dọc chuỗi cung ứng. Câu thứ hai (tăng giá chọn lọc, dự kiến tăng giá khi hợp đồng hết hạn) đúng theo S2 (p6), nhưng là thông tin thêm ngoài trọng tâm câu hỏi. Cả hai citation đều hỗ trợ đúng phần mình trích."
+ },
+ {
+  "query_id": "q06",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p22 Cleveland Prices): 'remained robust for the eleventh consecutive reporting period'; S2 (p21 Cleveland Summary) nhắc lại 'eleventh consecutive period'. Đúng District và con số."
+ },
+ {
+  "query_id": "q07",
+  "answer_grade": 1,
+  "citation_support": [
+   true,
+   true,
+   true
+  ],
+  "reason": "Có đủ aluminum, copper, fuel (S1 p44) nhưng gộp 'shipping' vào danh sách chi phí đầu vào của nhà sản xuất; S1 nói shipping là báo cáo riêng ('There have also been several reports about increasing shipping costs'). Câu thêm về margin pressure lấy từ ngữ cảnh khác (S2 p47 food manufacturer ngành nông nghiệp). Mỗi citation hỗ trợ phần nó trích, nhưng câu trả lời có một chi tiết sai → đúng một phần."
+ },
+ {
+  "query_id": "q08",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p41): 'more than one-third of firms … about the same share as in the previous report'."
+ },
+ {
+  "query_id": "q09",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p26) ghi nguyên văn 30% và chuyện cây xà lách; đủ hai ý."
+ },
+ {
+  "query_id": "q10",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p11 Boston = New England): 'roles are dominated by people nearing or entering retirement'. Agent hiểu đúng New England là Boston. Cụm 'leading to a shortage of available candidates' là diễn giải hợp lý của 'struggled to find candidates'."
+ },
+ {
+  "query_id": "q11",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p28 Atlanta): 'Most contacts reported moderate annual wage increases in the 2 to 3 percent range.' Không nhầm với St. Louis 2.5% hay Philadelphia 4%."
+ },
+ {
+  "query_id": "q12",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "Giống nội dung bản đã chấm: '4 percent … cost of living, weaker labor availability … by competitors'. S1 (p17) hỗ trợ trừ chữ 'competitors' (ở p18, không trích). Đạt >= 2 lý do, không có chi tiết sai."
+ },
+ {
+  "query_id": "q13",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p34 Chicago = Seventh District): 'spend more on fuel to dry bushels, compounding … high energy prices'. Vẫn gộp 'heavy rains' vào nguyên nhân và dùng 'exacerbated by' (diễn giải), giống bản đã chấm. Dense cần 2 lượt search."
+ },
+ {
+  "query_id": "q14",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p15): 'Industrial demand remained strong, largely driven by data centers'."
+ },
+ {
+  "query_id": "q15",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p46): diesel shortages → early delivery 'to ensure availability'. Có 'exacerbated by' (diễn giải 'Amid')."
+ },
+ {
+  "query_id": "u01",
+  "abstention_correct": true,
+  "citation_support": [],
+  "reason": "Search có filter Boston rồi từ chối: 'not specified in the Beige Book'. Không đưa con số."
+ },
+ {
+  "query_id": "u02",
+  "abstention_correct": true,
+  "citation_support": [],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] Agent đã search rồi từ chối: không có thông tin giá diesel mỗi gallon ở Atlanta. Không đưa ra con số, không lấy số '+30%' của Richmond. Đúng: tài liệu không có giá theo $/gallon."
+ }
+]

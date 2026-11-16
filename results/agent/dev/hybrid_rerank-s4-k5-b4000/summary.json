@@ -1,0 +1,60 @@
+{
+ "run_at": "2026-11-16T04:20:23+00:00",
+ "split": "dev",
+ "model": "openai/gpt-4o-mini",
+ "provider": "openrouter",
+ "config": {
+  "model": "openai/gpt-4o-mini",
+  "max_searches": 4,
+  "top_k": 5,
+  "context_budget": 4000,
+  "temperature": 0.0,
+  "retriever_name": "hybrid_rerank"
+ },
+ "cases": 17,
+ "errors": 0,
+ "status": {
+  "answered": 15,
+  "abstain": 2
+ },
+ "tool_use": {
+  "n": 17,
+  "N": 17,
+  "rate": 1.0
+ },
+ "searches_distribution": {
+  "1": 17
+ },
+ "context_evidence_rate": {
+  "n": 15,
+  "N": 15,
+  "rate": 1.0
+ },
+ "cited_gold_chunk (tự động, chưa phải citation hợp lệ)": {
+  "n": 15,
+  "N": 15,
+  "rate": 1.0
+ },
+ "answered_with_citation": {
+  "n": 15,
+  "N": 15,
+  "rate": 1.0
+ },
+ "abstain_on_unanswerable (chờ xác nhận tay)": {
+  "n": 2,
+  "N": 2,
+  "rate": 1.0
+ },
+ "false_abstain_on_answerable": {
+  "n": 0,
+  "N": 15,
+  "rate": 0.0
+ },
+ "tokens": {
+  "input": 27120,
+  "output": 1427
+ },
+ "cost_usd_total": 0.00493,
+ "median_seconds_per_question": 3.84,
+ "avg_context_chars": 2451
+}

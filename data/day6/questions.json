@@ -1,0 +1,410 @@
+[
+ {
+  "id": "q01",
+  "split": "dev",
+  "question": "How many times per year is the Beige Book published?",
+  "expected_answer": "Eight times per year.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 3,
+    "evidence": "Reports are published eight times per year."
+   }
+  ],
+  "type": "truc_tiep",
+  "grounding_requirements": [
+   "eight times per year"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q02",
+  "split": "dev",
+  "question": "Does the Beige Book express the opinions of Fed policymakers?",
+  "expected_answer": "No. It summarizes comments from outside contacts and is not a commentary on the views of Federal Reserve officials.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 3,
+    "evidence": "The Beige Book is not a commentary on the views of Federal Reserve officials."
+   },
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 5,
+    "evidence": "is not a commentary on the views of Federal Reserve officials."
+   }
+  ],
+  "type": "dien_dat_lai",
+  "grounding_requirements": [
+   "states it is NOT a commentary on the views of Federal Reserve officials"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q03",
+  "split": "dev",
+  "question": "Which Reserve Bank prepared the October 2026 Beige Book, and what was the information cut-off date?",
+  "expected_answer": "The Federal Reserve Bank of Philadelphia; information collected on or before October 5, 2026.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 5,
+    "evidence": "This report was prepared at the Federal Reserve Bank of Philadelphia based on information collected on or before October 5, 2026."
+   }
+  ],
+  "type": "truc_tiep",
+  "grounding_requirements": [
+   "Federal Reserve Bank of Philadelphia",
+   "on or before October 5, 2026"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q04",
+  "split": "dev",
+  "question": "How many Federal Reserve Districts reported no significant change in overall economic activity?",
+  "expected_answer": "Three Districts.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 5,
+    "evidence": "Three Districts reported modest growth, while four reported slight growth, and three reported no significant change."
+   }
+  ],
+  "type": "so_lieu_dieu_kien",
+  "grounding_requirements": [
+   "three Districts reported no significant change",
+   "refers to overall economic activity (not employment, where the count is four)"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q05",
+  "split": "dev",
+  "question": "How are higher energy costs being passed along the supply chain, according to the national summary?",
+  "expected_answer": "Through fuel surcharges: firms reported elevated diesel prices, and fuel surcharges passed increased costs throughout the supply chain.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 6,
+    "evidence": "Firms reported elevated diesel prices and noted that fuel surcharges were passing on increased costs throughout the supply chain."
+   }
+  ],
+  "type": "dien_dat_lai",
+  "grounding_requirements": [
+   "elevated diesel prices",
+   "fuel surcharges pass costs through the supply chain"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q06",
+  "split": "dev",
+  "question": "In the Cleveland District, for how many consecutive reporting periods have nonlabor cost pressures remained robust?",
+  "expected_answer": "Eleven consecutive reporting periods.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 22,
+    "evidence": "Nonlabor cost pressures remained robust for the eleventh consecutive reporting period."
+   },
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 21,
+    "evidence": "Nonlabor cost pressures remained robust for the eleventh consecutive period"
+   }
+  ],
+  "type": "metadata",
+  "grounding_requirements": [
+   "eleventh consecutive period",
+   "attributed to the Cleveland / Fourth District"
+  ],
+  "filter": {
+   "district": "Cleveland"
+  },
+  "answerable": true
+ },
+ {
+  "id": "q07",
+  "split": "dev",
+  "question": "In the Kansas City District, which costs are driving up manufacturers' input costs?",
+  "expected_answer": "Rising costs of aluminum, copper, and fuel.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 44,
+    "evidence": "Manufacturing firms noted that increases in the costs of aluminum, copper, and fuel are driving up their input costs."
+   }
+  ],
+  "type": "metadata",
+  "grounding_requirements": [
+   "aluminum",
+   "copper",
+   "fuel"
+  ],
+  "filter": {
+   "district": "Kansas City"
+  },
+  "answerable": true
+ },
+ {
+  "id": "q08",
+  "split": "dev",
+  "question": "In the Minneapolis District, what share of firms raised prices to customers in September?",
+  "expected_answer": "More than one-third of firms (about the same share as in the previous report).",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 41,
+    "evidence": "more than one-third of firms reported that they increased prices to customers in September from the month earlier"
+   }
+  ],
+  "type": "metadata",
+  "grounding_requirements": [
+   "more than one-third of firms",
+   "raised prices in September vs. the prior month"
+  ],
+  "filter": {
+   "district": "Minneapolis"
+  },
+  "answerable": true
+ },
+ {
+  "id": "q09",
+  "split": "dev",
+  "question": "By how much have diesel prices risen for a regional grocery chain in the Richmond District, and what striking consequence did it describe?",
+  "expected_answer": "About thirty percent since last year; it now costs more to transport a head of lettuce from California than the lettuce itself.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 26,
+    "evidence": "with diesel prices rising thirty percent since last year, they now pay more to transport a head of lettuce from California than the cost of the lettuce itself."
+   }
+  ],
+  "type": "so_lieu_dieu_kien",
+  "grounding_requirements": [
+   "thirty percent since last year",
+   "transport of lettuce costs more than the lettuce"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q10",
+  "split": "dev",
+  "question": "Why is it hard for New England employers to hire for specialized legal, accounting and insurance positions?",
+  "expected_answer": "Those roles are dominated by people nearing or entering retirement.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 11,
+    "evidence": "employers struggled to find candidates for specialized jobs in law, accounting, and insurance, as those roles are dominated by people nearing or entering retirement."
+   }
+  ],
+  "type": "dien_dat_lai",
+  "grounding_requirements": [
+   "specialized jobs in law, accounting, insurance",
+   "workers nearing or entering retirement"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q11",
+  "split": "dev",
+  "question": "In the Atlanta District, what size of annual wage increases did most contacts report?",
+  "expected_answer": "Moderate annual increases in the 2 to 3 percent range.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 28,
+    "evidence": "Most contacts reported moderate annual wage increases in the 2 to 3 percent range."
+   }
+  ],
+  "type": "metadata",
+  "grounding_requirements": [
+   "2 to 3 percent"
+  ],
+  "filter": {
+   "district": "Atlanta"
+  },
+  "answerable": true
+ },
+ {
+  "id": "q12",
+  "split": "dev",
+  "question": "How large is the upcoming wage increase planned by a Philadelphia District retailer, and what reasons did it give?",
+  "expected_answer": "4 percent (up from 2.5 percent last year), owing to the high cost of living, weaker labor availability, and expected higher-than-usual raises by competitors.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 17,
+    "evidence": "upcoming wage increase of 4 percent (up from 2.5 percent last year) owing to the high cost of living, weaker labor availability"
+   }
+  ],
+  "type": "so_lieu_dieu_kien",
+  "grounding_requirements": [
+   "4 percent (vs 2.5 percent last year)",
+   "at least two reasons (cost of living, labor availability, competitors)"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q13",
+  "split": "dev",
+  "question": "Why are harvest costs expected to rise for farmers in the Seventh District?",
+  "expected_answer": "Heavy rains slowed the harvest, and farmers must spend more on fuel to dry bushels, compounding high energy prices.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 34,
+    "evidence": "Farmers also were expected to spend more on fuel to dry bushels, compounding the effect of high energy prices on the costs of harvest."
+   }
+  ],
+  "type": "dien_dat_lai",
+  "grounding_requirements": [
+   "more fuel to dry bushels",
+   "high energy prices raise harvest costs"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q14",
+  "split": "dev",
+  "question": "In the New York District, what was driving demand for industrial real estate?",
+  "expected_answer": "Data centers; industrial demand remained strong, largely driven by data centers.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 15,
+    "evidence": "Industrial demand remained strong, largely driven by data centers."
+   }
+  ],
+  "type": "metadata",
+  "grounding_requirements": [
+   "data centers",
+   "industrial demand remained strong"
+  ],
+  "filter": {
+   "district": "New York"
+  },
+  "answerable": true
+ },
+ {
+  "id": "q15",
+  "split": "dev",
+  "question": "Why did some fuel buyers in rural Colorado take delivery of shipments early?",
+  "expected_answer": "Because of intermittent diesel shortages at gas stations, they took early delivery to ensure availability.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 46,
+    "evidence": "intermittent diesel shortages at gas stations in recent weeks, causing some buyers to take early delivery of fuel shipments to ensure availability."
+   }
+  ],
+  "type": "dien_dat_lai",
+  "grounding_requirements": [
+   "intermittent diesel shortages",
+   "early delivery to ensure availability"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q16",
+  "split": "test",
+  "question": "In the Dallas District, what was the most commonly cited factor driving up costs?",
+  "expected_answer": "The higher price of diesel.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 48,
+    "evidence": "The higher price for diesel reigned supreme in terms of the most commonly cited factor driving up costs"
+   }
+  ],
+  "type": "metadata",
+  "grounding_requirements": [
+   "higher diesel price",
+   "most commonly cited cost factor"
+  ],
+  "filter": {
+   "district": "Dallas"
+  },
+  "answerable": true
+ },
+ {
+  "id": "q17",
+  "split": "test",
+  "question": "How much have fertilizer and diesel prices increased for farmers in the Dallas District?",
+  "expected_answer": "Fertilizer prices are up 10 to 25 percent from a year ago, and diesel prices have nearly doubled.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 51,
+    "evidence": "fertilizer prices are up 10 to 25 percent from a year ago and diesel prices have nearly doubled."
+   }
+  ],
+  "type": "so_lieu_dieu_kien",
+  "grounding_requirements": [
+   "fertilizer up 10 to 25 percent",
+   "diesel nearly doubled"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q18",
+  "split": "test",
+  "question": "In the San Francisco District, which prices fell during the reporting period?",
+  "expected_answer": "Prices for lumber and other wood products; a Mountain West construction firm also lowered its prices for the first time in several years.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 53,
+    "evidence": "Prices fell for lumber and other wood products, and a construction firm in the Mountain West lowered prices for the first time in several years"
+   }
+  ],
+  "type": "metadata",
+  "grounding_requirements": [
+   "lumber and wood products prices fell"
+  ],
+  "filter": {
+   "district": "San Francisco"
+  },
+  "answerable": true
+ },
+ {
+  "id": "q19",
+  "split": "test",
+  "question": "Why did some workers in the Eighth District turn down job offers?",
+  "expected_answer": "Because of high insurance costs, particularly at smaller firms.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 37,
+    "evidence": "workers declined job offers due to high insurance costs, particularly at smaller firms."
+   }
+  ],
+  "type": "dien_dat_lai",
+  "grounding_requirements": [
+   "declined job offers",
+   "high insurance costs (esp. smaller firms)"
+  ],
+  "answerable": true
+ },
+ {
+  "id": "q20",
+  "split": "test",
+  "question": "Why were some phosphate producers forced to curtail output?",
+  "expected_answer": "The Middle East conflict pushed up sulfur prices sharply.",
+  "gold": [
+   {
+    "source_id": "beigebook-2026-10",
+    "page": 54,
+    "evidence": "The conflict in the Middle East pushed up sulfur prices sharply, forcing some phosphate producers to curtail output."
+   }
+  ],
+  "type": "truc_tiep",
+  "grounding_requirements": [
+   "Middle East conflict",
+   "sulfur prices rose sharply"
+  ],
+  "answerable": true
+ }
+]

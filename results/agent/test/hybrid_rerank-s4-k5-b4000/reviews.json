@@ -1,0 +1,54 @@
+[
+ {
+  "query_id": "q16",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p48 Dallas Prices): 'The higher price for diesel reigned supreme in terms of the most commonly cited factor driving up costs'. Đúng. Có thêm ý phụ (freight, agriculture, airline, margin compression) đều có trong S1; 'leading to' là diễn giải nhẹ của 'as well as causing'."
+ },
+ {
+  "query_id": "q17",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p51 Dallas Agriculture): 'fertilizer prices are up 10 to 25 percent from a year ago and diesel prices have nearly doubled'. Đủ cả hai con số."
+ },
+ {
+  "query_id": "q18",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p53 San Francisco Prices): 'Prices fell for lumber and other wood products, and a construction firm in the Mountain West lowered prices for the first time in several years in order to retain customers.' Đủ và đúng."
+ },
+ {
+  "query_id": "q19",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S2 (p37 St. Louis = Eighth District): 'workers declined job offers due to high insurance costs, particularly at smaller firms'. Agent hiểu đúng Eighth District là St. Louis (hybrid tìm được nhờ BM25 bắt 'job offers')."
+ },
+ {
+  "query_id": "q20",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p54 San Francisco): 'The conflict in the Middle East pushed up sulfur prices sharply, forcing some phosphate producers to curtail output.' Đủ hai yêu cầu."
+ },
+ {
+  "query_id": "u03",
+  "abstention_correct": true,
+  "citation_support": [],
+  "reason": "Search có filter Dallas, đọc p50 (regulatory pause) rồi từ chối: 'specific number of permit applications frozen is not mentioned'. Nêu đúng điều tài liệu có (pause) mà không bịa con số."
+ },
+ {
+  "query_id": "u04",
+  "abstention_correct": true,
+  "citation_support": [],
+  "reason": "3 lượt search (SF, không filter → gặp p11 Boston 'median home prices', SF lần nữa) rồi từ chối: không có % thay đổi giá nhà SF. Không lấy thông tin Boston p11 (hard negative) để trả lời."
+ }
+]

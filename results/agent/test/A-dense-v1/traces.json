@@ -1,0 +1,1054 @@
+[
+ {
+  "query_id": "q16",
+  "question": "In the Dallas District, what was the most commonly cited factor driving up costs?",
+  "user_filter": {
+   "district": "Dallas"
+  },
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "In the Dallas District, the most commonly cited factor driving up costs was the higher price for diesel, which impacted freight, agriculture, and airline prices, leading to widespread margin compression across various industries [B:beigebook-2026-10:p048:004:2268c1cd].",
+  "answer_labels": "In the Dallas District, the most commonly cited factor driving up costs was the higher price for diesel, which impacted freight, agriculture, and airline prices, leading to widespread margin compression across various industries [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p048:004:2268c1cd"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "driving up costs",
+    "model_district": "Dallas",
+    "filter": {
+     "district": "Dallas"
+    },
+    "filter_source": "user",
+    "elapsed_ms": 42.3,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p048:004:2268c1cd",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.6406
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p048:005:cc3fc400",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.522
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p051:000:14f34aeb",
+      "page": 51,
+      "district": "Dallas",
+      "score": 0.4213
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p049:002:defc143a",
+      "page": 49,
+      "district": "Dallas",
+      "score": 0.3578
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p050:006:ff9b3a98",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.3564
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p048:004:2268c1cd",
+     "B:beigebook-2026-10:p048:005:cc3fc400",
+     "B:beigebook-2026-10:p051:000:14f34aeb",
+     "B:beigebook-2026-10:p049:002:defc143a",
+     "B:beigebook-2026-10:p050:006:ff9b3a98"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "In the Dallas District, the most commonly cited factor driving up costs was the higher price for diesel, which impacted freight, agriculture, and airline prices, leading to widespread margin compression across various industries [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p048:004:2268c1cd",
+   "S2": "B:beigebook-2026-10:p048:005:cc3fc400",
+   "S3": "B:beigebook-2026-10:p051:000:14f34aeb",
+   "S4": "B:beigebook-2026-10:p049:002:defc143a",
+   "S5": "B:beigebook-2026-10:p050:006:ff9b3a98"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p048:004:2268c1cd",
+   "B:beigebook-2026-10:p048:005:cc3fc400",
+   "B:beigebook-2026-10:p051:000:14f34aeb",
+   "B:beigebook-2026-10:p049:002:defc143a",
+   "B:beigebook-2026-10:p050:006:ff9b3a98"
+  ],
+  "context": "[B:beigebook-2026-10:p048:004:2268c1cd | starter/data/BeigeBook_20261014.pdf | page 48]\n[Dallas | Prices] Price pressures picked up, with strong growth over the reporting period. The higher price for diesel reigned supreme in terms of the most commonly cited factor driving up costs, impacting freight, agriculture, and airline prices as well as causing widespread margin compression across numerous industries. While retailers expressed notable concern regarding higher diesel prices, most noted it has not yet led to hikes in selling prices.\n\n[B:beigebook-2026-10:p048:005:cc3fc400 | starter/data/BeigeBook_20261014.pdf | page 48]\n[Dallas | Prices] Cost pressures remained elevated across the energy sector.\n\n[B:beigebook-2026-10:p051:000:14f34aeb | starter/data/BeigeBook_20261014.pdf | page 51]\n[Dallas | Agriculture] production prospects and solid grain prices, though there is concern over high input costs— fertilizer prices are up 10 to 25 percent from a year ago and diesel prices have nearly doubled. Cattle prices remained elevated amid continued tight supplies, but they declined over the reporting period and are lower than a year ago.\n\n[B:beigebook-2026-10:p049:002:defc143a | starter/data/BeigeBook_20261014.pdf | page 49]\n[Dallas | Retail Sales] Retail sales rose over the reporting period, with contacts characterizing sales as solid. However, auto sales softened further in September, as affordability issues and weak consumer sentiment restrained demand. There were some reports of lower-income customers being more cautious with spending. Inventory levels were generally the right size, and most retailers reported normal supply chain operations.\n\n[B:beigebook-2026-10:p050:006:ff9b3a98 | starter/data/BeigeBook_20261014.pdf | page 50]\n[Dallas | Energy] Increased cash flow is largely being directed towards investor returns and capital expenditures. Outlooks improved, with particular optimism among exploration and production firms.",
+  "context_chars": 1954,
+  "tokens": {
+   "input": 1522,
+   "output": 88
+  },
+  "cost_usd": 0.000281,
+  "elapsed_ms": 6851.2,
+  "split": "test",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q17",
+  "question": "How much have fertilizer and diesel prices increased for farmers in the Dallas District?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "In the Dallas District, fertilizer prices have increased by 10 to 25 percent from a year ago, while diesel prices have nearly doubled [B:beigebook-2026-10:p051:000:14f34aeb].",
+  "answer_labels": "In the Dallas District, fertilizer prices have increased by 10 to 25 percent from a year ago, while diesel prices have nearly doubled [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p051:000:14f34aeb"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "fertilizer prices increase Dallas District October 2026",
+    "model_district": "Dallas",
+    "filter": {
+     "district": "Dallas"
+    },
+    "filter_source": "model",
+    "elapsed_ms": 38.9,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p051:000:14f34aeb",
+      "page": 51,
+      "district": "Dallas",
+      "score": 0.5796
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p050:004:c9751263",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.4545
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p050:005:51ea88a4",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.392
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p048:005:cc3fc400",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.3625
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p049:000:4e494254",
+      "page": 49,
+      "district": "Dallas",
+      "score": 0.3541
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p051:000:14f34aeb",
+     "B:beigebook-2026-10:p050:004:c9751263",
+     "B:beigebook-2026-10:p050:005:51ea88a4",
+     "B:beigebook-2026-10:p048:005:cc3fc400",
+     "B:beigebook-2026-10:p049:000:4e494254"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "diesel prices increase Dallas District October 2026",
+    "model_district": "Dallas",
+    "filter": {
+     "district": "Dallas"
+    },
+    "filter_source": "model",
+    "elapsed_ms": 46.3,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p048:004:2268c1cd",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.5169
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p050:005:51ea88a4",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.4621
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p050:004:c9751263",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.4556
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p048:005:cc3fc400",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.3895
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p049:002:defc143a",
+      "page": 49,
+      "district": "Dallas",
+      "score": 0.377
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p048:004:2268c1cd",
+     "B:beigebook-2026-10:p049:002:defc143a"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "In the Dallas District, fertilizer prices have increased by 10 to 25 percent from a year ago, while diesel prices have nearly doubled [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 2,
+  "llm_calls": 3,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p051:000:14f34aeb",
+   "S2": "B:beigebook-2026-10:p050:004:c9751263",
+   "S3": "B:beigebook-2026-10:p050:005:51ea88a4",
+   "S4": "B:beigebook-2026-10:p048:005:cc3fc400",
+   "S5": "B:beigebook-2026-10:p049:000:4e494254",
+   "S6": "B:beigebook-2026-10:p048:004:2268c1cd",
+   "S7": "B:beigebook-2026-10:p049:002:defc143a"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p051:000:14f34aeb",
+   "B:beigebook-2026-10:p050:004:c9751263",
+   "B:beigebook-2026-10:p050:005:51ea88a4",
+   "B:beigebook-2026-10:p048:005:cc3fc400",
+   "B:beigebook-2026-10:p049:000:4e494254",
+   "B:beigebook-2026-10:p048:004:2268c1cd",
+   "B:beigebook-2026-10:p049:002:defc143a"
+  ],
+  "context": "[B:beigebook-2026-10:p051:000:14f34aeb | starter/data/BeigeBook_20261014.pdf | page 51]\n[Dallas | Agriculture] production prospects and solid grain prices, though there is concern over high input costs— fertilizer prices are up 10 to 25 percent from a year ago and diesel prices have nearly doubled. Cattle prices remained elevated amid continued tight supplies, but they declined over the reporting period and are lower than a year ago.\n\n[B:beigebook-2026-10:p050:004:c9751263 | starter/data/BeigeBook_20261014.pdf | page 50]\n[Dallas | Energy] Growth continued in Eleventh District oil and gas activity over the past six weeks, though increases in the rig count were modest. Respondents to the Dallas Fed Energy Survey reported increases in both oil and natural gas production in the third quarter. Contacts noted sharp cost pressures from wages and benefits, fuel, and materials.\n\n[B:beigebook-2026-10:p050:005:51ea88a4 | starter/data/BeigeBook_20261014.pdf | page 50]\n[Dallas | Energy] Most Dallas Fed Energy Survey respondents anticipate that it will take until the end of the second quarter 2027 or beyond for crude oil exports from the Persian Gulf to return to normal levels. Thus, most contacts expect oil prices over the next year to remain well above the average breakeven price needed to profitably drill new wells, but there is elevated uncertainty regarding their price outlooks.\n\n[B:beigebook-2026-10:p048:005:cc3fc400 | starter/data/BeigeBook_20261014.pdf | page 48]\n[Dallas | Prices] Cost pressures remained elevated across the energy sector.\n\n[B:beigebook-2026-10:p049:000:4e494254 | starter/data/BeigeBook_20261014.pdf | page 49]\n[Dallas | Manufacturing] Texas manufacturing activity accelerated further over the past couple of months, with a sharp pickup in production and demand. Recent strength spanned both durables and nondurable goods manufacturing, and it goes beyond AI or semiconductor-related growth. One machinery manufacturer noted that oil companies were spending money at a much higher rate than expected. Gulf Coast refinery and petrochemical activity remained elevated.\n\n[B:beigebook-2026-10:p048:004:2268c1cd | starter/data/BeigeBook_20261014.pdf | page 48]\n[Dallas | Prices] Price pressures picked up, with strong growth over the reporting period. The higher price for diesel reigned supreme in terms of the most commonly cited factor driving up costs, impacting freight, agriculture, and airline prices as well as causing widespread margin compression across numerous industries. While retailers expressed notable concern regarding higher diesel prices, most noted it has not yet led to hikes in selling prices.\n\n[B:beigebook-2026-10:p049:002:defc143a | starter/data/BeigeBook_20261014.pdf | page 49]\n[Dallas | Retail Sales] Retail sales rose over the reporting period, with contacts characterizing sales as solid. However, auto sales softened further in September, as affordability issues and weak consumer sentiment restrained demand. There were some reports of lower-income customers being more cautious with spending. Inventory levels were generally the right size, and most retailers reported normal supply chain operations.",
+  "context_chars": 3166,
+  "tokens": {
+   "input": 2761,
+   "output": 152
+  },
+  "cost_usd": 0.000505,
+  "elapsed_ms": 5162.8,
+  "split": "test",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q18",
+  "question": "In the San Francisco District, which prices fell during the reporting period?",
+  "user_filter": {
+   "district": "San Francisco"
+  },
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "In the San Francisco District, prices fell for lumber and other wood products, and a construction firm lowered prices for the first time in several years to retain customers [B:beigebook-2026-10:p053:002:1ae7b76c].",
+  "answer_labels": "In the San Francisco District, prices fell for lumber and other wood products, and a construction firm lowered prices for the first time in several years to retain customers [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p053:002:1ae7b76c"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "prices fell",
+    "model_district": "San Francisco",
+    "filter": {
+     "district": "San Francisco"
+    },
+    "filter_source": "user",
+    "elapsed_ms": 56.2,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p053:002:1ae7b76c",
+      "page": 53,
+      "district": "San Francisco",
+      "score": 0.3845
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p053:005:43094f00",
+      "page": 53,
+      "district": "San Francisco",
+      "score": 0.3646
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p053:008:1fc2c452",
+      "page": 53,
+      "district": "San Francisco",
+      "score": 0.3069
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p054:002:8881a139",
+      "page": 54,
+      "district": "San Francisco",
+      "score": 0.3042
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p054:000:a6cd0547",
+      "page": 54,
+      "district": "San Francisco",
+      "score": 0.2868
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p053:002:1ae7b76c",
+     "B:beigebook-2026-10:p053:005:43094f00",
+     "B:beigebook-2026-10:p053:008:1fc2c452",
+     "B:beigebook-2026-10:p054:002:8881a139",
+     "B:beigebook-2026-10:p054:000:a6cd0547"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "In the San Francisco District, prices fell for lumber and other wood products, and a construction firm lowered prices for the first time in several years to retain customers [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p053:002:1ae7b76c",
+   "S2": "B:beigebook-2026-10:p053:005:43094f00",
+   "S3": "B:beigebook-2026-10:p053:008:1fc2c452",
+   "S4": "B:beigebook-2026-10:p054:002:8881a139",
+   "S5": "B:beigebook-2026-10:p054:000:a6cd0547"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p053:002:1ae7b76c",
+   "B:beigebook-2026-10:p053:005:43094f00",
+   "B:beigebook-2026-10:p053:008:1fc2c452",
+   "B:beigebook-2026-10:p054:002:8881a139",
+   "B:beigebook-2026-10:p054:000:a6cd0547"
+  ],
+  "context": "[B:beigebook-2026-10:p053:002:1ae7b76c | starter/data/BeigeBook_20261014.pdf | page 53]\n[San Francisco | Prices] Tariffs continued to put upward pressure on prices for imported textiles, metals, and some retail products. Businesses also reported higher costs for health insurance, cybersecurity, software, utilities, seafood, and beef. Prices fell for lumber and other wood products, and a construction firm in the Mountain West lowered prices for the first time in several years in order to retain customers.\n\n[B:beigebook-2026-10:p053:005:43094f00 | starter/data/BeigeBook_20261014.pdf | page 53]\n[San Francisco | Retail Trade and Services] Retail sales softened slightly. Economic uncertainty and high prices pushed consumers to spend less on discretionary items, like apparel and footwear, and focus more on essential and valueoriented goods, such as groceries and back-to-school products.\n\n[B:beigebook-2026-10:p053:008:1fc2c452 | starter/data/BeigeBook_20261014.pdf | page 53]\n[San Francisco | Retail Trade and Services] Tourist volumes in Hawaii declined due to weaker demand from Canadian and Asian visitors. In Las Vegas, spending related\n\n[B:beigebook-2026-10:p054:002:8881a139 | starter/data/BeigeBook_20261014.pdf | page 54]\n[San Francisco | Agriculture and Resource-Related Industries] Conditions in agriculture and resource-related sectors weakened somewhat. Prices that producers received for grain, forage, and row crops improved of late, and cattle prices remained near record levels. Still, elevated diesel prices raised production costs, and higher interest rates weighed heavily on capital-intensive producers. Weak demand for wood products held down log prices.\n\n[B:beigebook-2026-10:p054:000:a6cd0547 | starter/data/BeigeBook_20261014.pdf | page 54]\n[San Francisco | Retail Trade and Services] to convention visitors and those making high-end purchases offset the effects from the decline in the number of international and value-oriented travelers. Reports indicated that restaurant sales softened slightly overall as consumers dined out less often and ordered less alcohol, although demand at upscale dining establishments remained strong. Demand was steady for laboratory testing and fell slightly for janitorial services.",
+  "context_chars": 2247,
+  "tokens": {
+   "input": 1586,
+   "output": 80
+  },
+  "cost_usd": 0.000286,
+  "elapsed_ms": 3389.6,
+  "split": "test",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "q19",
+  "question": "Why did some workers in the Eighth District turn down job offers?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "abstain",
+  "answer": "The search did not yield specific information regarding why workers in the Eighth District turned down job offers. Details about labor market conditions or specific reasons for job offer rejections were not found in the report.",
+  "answer_labels": "The search did not yield specific information regarding why workers in the Eighth District turned down job offers. Details about labor market conditions or specific reasons for job offer rejections were not found in the report.",
+  "citations": [],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "Eighth District workers turn down job offers",
+    "model_district": null,
+    "filter": null,
+    "filter_source": null,
+    "elapsed_ms": 43.5,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p052:003:b38e6396",
+      "page": 52,
+      "district": "San Francisco",
+      "score": 0.471
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p041:004:ee9e7192",
+      "page": 41,
+      "district": "Minneapolis",
+      "score": 0.4366
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p032:003:8b25c311",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.4275
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p052:004:e27c52df",
+      "page": 52,
+      "district": "San Francisco",
+      "score": 0.4148
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p044:003:b355e668",
+      "page": 44,
+      "district": "Kansas City",
+      "score": 0.4037
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p052:003:b38e6396",
+     "B:beigebook-2026-10:p041:004:ee9e7192",
+     "B:beigebook-2026-10:p032:003:8b25c311",
+     "B:beigebook-2026-10:p052:004:e27c52df",
+     "B:beigebook-2026-10:p044:003:b355e668"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "Eighth District job offers turned down",
+    "model_district": "St. Louis",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 41.1,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p052:003:b38e6396",
+      "page": 52,
+      "district": "San Francisco",
+      "score": 0.4677
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p032:003:8b25c311",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.4436
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p013:004:f809947b",
+      "page": 13,
+      "district": "New York",
+      "score": 0.4415
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p052:004:e27c52df",
+      "page": 52,
+      "district": "San Francisco",
+      "score": 0.4172
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p011:001:10748ea4",
+      "page": 11,
+      "district": "Boston",
+      "score": 0.417
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p013:004:f809947b",
+     "B:beigebook-2026-10:p011:001:10748ea4"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "Eighth District labor market conditions",
+    "model_district": "St. Louis",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 52.2,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p044:003:b355e668",
+      "page": 44,
+      "district": "Kansas City",
+      "score": 0.6925
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p009:003:f68b8862",
+      "page": 9,
+      "district": "Boston",
+      "score": 0.6159
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p005:004:849b93c6",
+      "page": 5,
+      "district": "National",
+      "score": 0.5891
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p044:000:234f722c",
+      "page": 44,
+      "district": "Kansas City",
+      "score": 0.5734
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p017:004:f3c3ba17",
+      "page": 17,
+      "district": "Philadelphia",
+      "score": 0.5618
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p009:003:f68b8862",
+     "B:beigebook-2026-10:p005:004:849b93c6",
+     "B:beigebook-2026-10:p017:004:f3c3ba17"
+    ],
+    "dropped_by_budget": [
+     "B:beigebook-2026-10:p044:000:234f722c"
+    ]
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "Eighth District workers rejecting job offers",
+    "model_district": "St. Louis",
+    "filter": null,
+    "filter_source": "model_rejected",
+    "elapsed_ms": 46.5,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p032:003:8b25c311",
+      "page": 32,
+      "district": "Chicago",
+      "score": 0.4776
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p011:001:10748ea4",
+      "page": 11,
+      "district": "Boston",
+      "score": 0.4725
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p052:005:12dbbd06",
+      "page": 52,
+      "district": "San Francisco",
+      "score": 0.4433
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p052:003:b38e6396",
+      "page": 52,
+      "district": "San Francisco",
+      "score": 0.4425
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p018:000:9f6f8d24",
+      "page": 18,
+      "district": "Philadelphia",
+      "score": 0.4381
+     }
+    ],
+    "new_context_ids": [],
+    "dropped_by_budget": [
+     "B:beigebook-2026-10:p052:005:12dbbd06",
+     "B:beigebook-2026-10:p018:000:9f6f8d24"
+    ]
+   },
+   {
+    "event": "search_limit",
+    "max_searches": 4
+   },
+   {
+    "event": "submit_answer",
+    "abstain": true,
+    "answer_raw": "The search did not yield specific information regarding why workers in the Eighth District turned down job offers. Details about labor market conditions or specific reasons for job offer rejections were not found in the report.",
+    "citation_labels": [],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 4,
+  "llm_calls": 5,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p052:003:b38e6396",
+   "S2": "B:beigebook-2026-10:p041:004:ee9e7192",
+   "S3": "B:beigebook-2026-10:p032:003:8b25c311",
+   "S4": "B:beigebook-2026-10:p052:004:e27c52df",
+   "S5": "B:beigebook-2026-10:p044:003:b355e668",
+   "S6": "B:beigebook-2026-10:p013:004:f809947b",
+   "S7": "B:beigebook-2026-10:p011:001:10748ea4",
+   "S8": "B:beigebook-2026-10:p009:003:f68b8862",
+   "S9": "B:beigebook-2026-10:p005:004:849b93c6",
+   "S10": "B:beigebook-2026-10:p017:004:f3c3ba17"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p052:003:b38e6396",
+   "B:beigebook-2026-10:p041:004:ee9e7192",
+   "B:beigebook-2026-10:p032:003:8b25c311",
+   "B:beigebook-2026-10:p052:004:e27c52df",
+   "B:beigebook-2026-10:p044:003:b355e668",
+   "B:beigebook-2026-10:p013:004:f809947b",
+   "B:beigebook-2026-10:p011:001:10748ea4",
+   "B:beigebook-2026-10:p009:003:f68b8862",
+   "B:beigebook-2026-10:p005:004:849b93c6",
+   "B:beigebook-2026-10:p017:004:f3c3ba17"
+  ],
+  "context": "[B:beigebook-2026-10:p052:003:b38e6396 | starter/data/BeigeBook_20261014.pdf | page 52]\n[San Francisco | Labor Markets] There were reported staff reductions in agriculture, janitorial services, and commercial real estate, with contacts citing cost savings, lost contracts, and firm mergers as the driving factors. Several nonprofit organizations adjusted staffing levels in response to funding challenges, and a large Northern California nonprofit implemented furloughs after a new grant allowed it to avoid further layoffs.\n\n[B:beigebook-2026-10:p041:004:ee9e7192 | starter/data/BeigeBook_20261014.pdf | page 41]\n[Minneapolis | Worker Experience] Grocery store workers were facing reduced hours as stores saw tighter profit margins from higher wholesale costs. Underemployed workers needed second or third jobs to make ends meet.\n\n[B:beigebook-2026-10:p032:003:8b25c311 | starter/data/BeigeBook_20261014.pdf | page 32]\n[Chicago | Labor Markets] A contact at a temporary employment placement agency reported uneven demand for workers across manufacturing subsectors, and a manufacturing contact said that layoffs at nearby plants had led to more applications for their open positions. In the administrative and professional services sectors, contacts noted greater ease in hiring.\n\n[B:beigebook-2026-10:p052:004:e27c52df | starter/data/BeigeBook_20261014.pdf | page 52]\n[San Francisco | Labor Markets] Turnover remained low, and employers generally found it easy to fill most openings. However, experienced workers in technology and financial services were hard to recruit. A Northern California contact observed consultants leaving large and legacy firms to start their own AI-enabled businesses. Wages increased slightly on net and were in line with prior reporting periods. Most reports indicated little to no change in wages and salaries.\n\n[B:beigebook-2026-10:p044:003:b355e668 | starter/data/BeigeBook_20261014.pdf | page 44]\n[Kansas City | Labor Markets] Labor conditions in the Tenth District have experienced little to no change since the last Beige Book, despite strong demand for labor from manufacturing firms. Manufacturing companies have indicated that they increased average hours, added overtime options, and extended shifts because of the limited labor availability within the market. One manufacturer noted, \"It is hard to expand the workforce when they leave faster than you can replace them.\"\n\n[B:beigebook-2026-10:p013:004:f809947b | starter/data/BeigeBook_20261014.pdf | page 13]\n[New York | Labor Markets] However, a childcare provider noted a readily available supply of applicants. Some larger organizations were beginning to cut selected jobs or hold off on hiring as they integrated AI into their operations, and demand for marketing roles softened. There were no reports of large-scale layoffs in the region, though a few smaller firms reported cutting staff in response to lost business and rising costs.\n\n[B:beigebook-2026-10:p011:001:10748ea4 | starter/data/BeigeBook_20261014.pdf | page 11]\n[Boston | Nonfinancial Services] Staffing contacts noted that employers struggled to find candidates for specialized jobs in law, accounting, and insurance, as those roles are dominated by people nearing or entering retirement. Contacts expected modest to moderate growth in demand for their services going forward and felt that uncertainty had decreased compared with two months ago.\n\n[B:beigebook-2026-10:p009:003:f68b8862 | starter/data/BeigeBook_20261014.pdf | page 9]\n[Boston | Labor Markets] Labor supply appeared mostly stable, but contacts pointed to workforce shortages in health care, childcare and human services, owing to increased immigration enforcement and an aging population. A grocer reported staffing challenges in its trucking and supply-chain operations, leading to increased reliance on third-party providers. Wages rose slightly overall, with isolated premiums for highly skilled talent.\n\n[B:beigebook-2026-10:p005:004:849b93c6 | starter/data/BeigeBook_20261014.pdf | page 5]\n[National | Labor Markets] Most Districts described little or no net change in overall employment levels. While three Districts described modest increases, five reported slight increases, and four reported no significant change. Overall, labor market conditions were little changed. Labor supply was generally adequate to meet demand; however, shortages persisted for specialized, technical, and skilled trade workers.\n\n[B:beigebook-2026-10:p017:004:f3c3ba17 | starter/data/BeigeBook_20261014.pdf | page 17]\n[Philadelphia | Labor Markets] However, the lack of skilled labor has continued to constrain manufacturing activity, according to contacts. Nearly three-quarters of the surveyed manufacturers reported labor supply as at least a slight constraint on capacity utilization in the third quarter, up from half in the previous quarter.",
+  "context_chars": 4859,
+  "tokens": {
+   "input": 6016,
+   "output": 147
+  },
+  "cost_usd": 0.000789,
+  "elapsed_ms": 9093.0,
+  "split": "test",
+  "context_hit": false,
+  "cited_gold": false
+ },
+ {
+  "query_id": "q20",
+  "question": "Why were some phosphate producers forced to curtail output?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "answered",
+  "answer": "Some phosphate producers were forced to curtail output due to sharply rising sulfur prices, which were driven by the conflict in the Middle East [B:beigebook-2026-10:p054:003:a97a42cc].",
+  "answer_labels": "Some phosphate producers were forced to curtail output due to sharply rising sulfur prices, which were driven by the conflict in the Middle East [S1].",
+  "citations": [
+   "B:beigebook-2026-10:p054:003:a97a42cc"
+  ],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "phosphate producers curtail output",
+    "model_district": null,
+    "filter": null,
+    "filter_source": null,
+    "elapsed_ms": 42.5,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p054:003:a97a42cc",
+      "page": 54,
+      "district": "San Francisco",
+      "score": 0.4139
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p014:004:99ab6685",
+      "page": 14,
+      "district": "New York",
+      "score": 0.3674
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p018:006:5ffa36b6",
+      "page": 18,
+      "district": "Philadelphia",
+      "score": 0.3634
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p017:004:f3c3ba17",
+      "page": 17,
+      "district": "Philadelphia",
+      "score": 0.3538
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p037:007:606c1529",
+      "page": 37,
+      "district": "St. Louis",
+      "score": 0.3489
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p054:003:a97a42cc",
+     "B:beigebook-2026-10:p014:004:99ab6685",
+     "B:beigebook-2026-10:p018:006:5ffa36b6",
+     "B:beigebook-2026-10:p017:004:f3c3ba17",
+     "B:beigebook-2026-10:p037:007:606c1529"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": false,
+    "answer_raw": "Some phosphate producers were forced to curtail output due to sharply rising sulfur prices, which were driven by the conflict in the Middle East [S1].",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p054:003:a97a42cc",
+   "S2": "B:beigebook-2026-10:p014:004:99ab6685",
+   "S3": "B:beigebook-2026-10:p018:006:5ffa36b6",
+   "S4": "B:beigebook-2026-10:p017:004:f3c3ba17",
+   "S5": "B:beigebook-2026-10:p037:007:606c1529"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p054:003:a97a42cc",
+   "B:beigebook-2026-10:p014:004:99ab6685",
+   "B:beigebook-2026-10:p018:006:5ffa36b6",
+   "B:beigebook-2026-10:p017:004:f3c3ba17",
+   "B:beigebook-2026-10:p037:007:606c1529"
+  ],
+  "context": "[B:beigebook-2026-10:p054:003:a97a42cc | starter/data/BeigeBook_20261014.pdf | page 54]\n[San Francisco | Agriculture and Resource-Related Industries] The conflict in the Middle East pushed up sulfur prices sharply, forcing some phosphate producers to curtail output. Harvest quality was reportedly good in California, while yields in Idaho were somewhat below average. A Pacific Northwest contact noted that a sizable share of West Coast vineyards had been idled due to weakening demand for wine grapes.\n\n[B:beigebook-2026-10:p014:004:99ab6685 | starter/data/BeigeBook_20261014.pdf | page 14]\n[New York | Manufacturing and Distribution] Manufacturing activity grew moderately following a solid pickup last period. An industrial equipment manufacturer reported a surge in semiconductor, electronics, government, and aerospace orders, though demand in other segments declined. Delivery times lengthened, and supply availability continued to worsen.\n\n[B:beigebook-2026-10:p018:006:5ffa36b6 | starter/data/BeigeBook_20261014.pdf | page 18]\n[Philadelphia | Manufacturing] However, more than two-thirds of the surveyed firms reported increased production in the third quarter, the highest share since the second quarter of 2022, suggesting growth may be broadening across the sector. Labor supply and uncertainty are the biggest constraints on capacity utilization, according to contacts.\n\n[B:beigebook-2026-10:p017:004:f3c3ba17 | starter/data/BeigeBook_20261014.pdf | page 17]\n[Philadelphia | Labor Markets] However, the lack of skilled labor has continued to constrain manufacturing activity, according to contacts. Nearly three-quarters of the surveyed manufacturers reported labor supply as at least a slight constraint on capacity utilization in the third quarter, up from half in the previous quarter.\n\n[B:beigebook-2026-10:p037:007:606c1529 | starter/data/BeigeBook_20261014.pdf | page 37]\n[St. Louis | Manufacturing] These improvements lowered unit costs and expanded output capacity without equivalent growth in head count.",
+  "context_chars": 2026,
+  "tokens": {
+   "input": 1495,
+   "output": 74
+  },
+  "cost_usd": 0.000269,
+  "elapsed_ms": 4261.1,
+  "split": "test",
+  "context_hit": true,
+  "cited_gold": true
+ },
+ {
+  "query_id": "u03",
+  "question": "How many data center permit applications were frozen by the Texas regulatory pause in the Dallas District?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "abstain",
+  "answer": "The Texas regulatory pause has frozen permits sought by data centers, but the specific number of permit applications frozen is not mentioned in the report.",
+  "answer_labels": "The Texas regulatory pause has frozen permits sought by data centers, but the specific number of permit applications frozen is not mentioned in the report.",
+  "citations": [],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "data center permit applications frozen Texas regulatory pause",
+    "model_district": "Dallas",
+    "filter": {
+     "district": "Dallas"
+    },
+    "filter_source": "model",
+    "elapsed_ms": 36.1,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p050:000:b0b597cb",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.4537
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p050:001:716cd220",
+      "page": 50,
+      "district": "Dallas",
+      "score": 0.3581
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p049:007:a38aaec8",
+      "page": 49,
+      "district": "Dallas",
+      "score": 0.2646
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p049:004:27006d7d",
+      "page": 49,
+      "district": "Dallas",
+      "score": 0.2645
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p048:003:f69df649",
+      "page": 48,
+      "district": "Dallas",
+      "score": 0.2507
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p050:000:b0b597cb",
+     "B:beigebook-2026-10:p050:001:716cd220",
+     "B:beigebook-2026-10:p049:007:a38aaec8",
+     "B:beigebook-2026-10:p049:004:27006d7d",
+     "B:beigebook-2026-10:p048:003:f69df649"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": true,
+    "answer_raw": "The Texas regulatory pause has frozen permits sought by data centers, but the specific number of permit applications frozen is not mentioned in the report.",
+    "citation_labels": [
+     "S1"
+    ],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p050:000:b0b597cb",
+   "S2": "B:beigebook-2026-10:p050:001:716cd220",
+   "S3": "B:beigebook-2026-10:p049:007:a38aaec8",
+   "S4": "B:beigebook-2026-10:p049:004:27006d7d",
+   "S5": "B:beigebook-2026-10:p048:003:f69df649"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p050:000:b0b597cb",
+   "B:beigebook-2026-10:p050:001:716cd220",
+   "B:beigebook-2026-10:p049:007:a38aaec8",
+   "B:beigebook-2026-10:p049:004:27006d7d",
+   "B:beigebook-2026-10:p048:003:f69df649"
+  ],
+  "context": "[B:beigebook-2026-10:p050:000:b0b597cb | starter/data/BeigeBook_20261014.pdf | page 50]\n[Dallas | Construction and Real Estate] moderate and was concentrated in top-tier assets. Industrial demand was characterized as healthy, though year-over-year rent growth was mixed. New construction activity for data centers has tempered due to a regulatory pause implemented by the state of Texas, which has frozen permits sought by data centers until their impact on electric grid reliability and on the state's water resources is audited.\n\n[B:beigebook-2026-10:p050:001:716cd220 | starter/data/BeigeBook_20261014.pdf | page 50]\n[Dallas | Construction and Real Estate] Data center developers are still finding it difficult to locate qualified workers, such as electricians and technicians, and building costs continue to rise for projects already underway. Water usage by AI data centers has become more efficient, as developers increasingly adopt closed-loop systems and liquid plate cooling. Meanwhile, public opposition remains a significant concern, potentially discouraging investment or delaying projects.\n\n[B:beigebook-2026-10:p049:007:a38aaec8 | starter/data/BeigeBook_20261014.pdf | page 49]\n[Dallas | Construction and Real Estate] Class C properties, however, were facing challenges amid softer demand at the lower end of the market. Office leasing activity remained\n\n[B:beigebook-2026-10:p049:004:27006d7d | starter/data/BeigeBook_20261014.pdf | page 49]\n[Dallas | Nonfinancial Services] Growth in nonfinancial services activity abated over the past six weeks. Revenue growth was primarily seen in transportation and administrative services. Airlines reported strong demand despite higher ticket prices, though one contact noted some weakness in demand from the lowest-income strata. Transportation contacts reported lower import volumes for ocean freight but higher export volumes.\n\n[B:beigebook-2026-10:p048:003:f69df649 | starter/data/BeigeBook_20261014.pdf | page 48]\n[Dallas | Labor Markets] Wage growth remained moderate. There were continued reports of data center construction driving up labor costs and drawing workers away from other industries.",
+  "context_chars": 2157,
+  "tokens": {
+   "input": 1532,
+   "output": 76
+  },
+  "cost_usd": 0.000275,
+  "elapsed_ms": 3108.2,
+  "split": "test",
+  "context_hit": null
+ },
+ {
+  "query_id": "u04",
+  "question": "By what percentage did single-family home prices change year over year in the San Francisco District?",
+  "user_filter": null,
+  "model": "openai/gpt-4o-mini",
+  "config": {
+   "model": "openai/gpt-4o-mini",
+   "max_searches": 4,
+   "top_k": 5,
+   "context_budget": 4000,
+   "temperature": 0.0,
+   "retriever_name": "dense",
+   "prompt_version": "v1",
+   "district_guard": true
+  },
+  "status": "abstain",
+  "answer": "The report does not specify the percentage change in single-family home prices year over year in the San Francisco District.",
+  "answer_labels": "The report does not specify the percentage change in single-family home prices year over year in the San Francisco District.",
+  "citations": [],
+  "note": null,
+  "error": null,
+  "events": [
+   {
+    "event": "search",
+    "tool": "search",
+    "retriever": "dense",
+    "query": "single-family home prices year over year San Francisco District",
+    "model_district": "San Francisco",
+    "filter": {
+     "district": "San Francisco"
+    },
+    "filter_source": "model",
+    "elapsed_ms": 61.4,
+    "results": [
+     {
+      "rank": 1,
+      "id": "B:beigebook-2026-10:p054:005:351bf07c",
+      "page": 54,
+      "district": "San Francisco",
+      "score": 0.5969
+     },
+     {
+      "rank": 2,
+      "id": "B:beigebook-2026-10:p053:001:4adbdc6a",
+      "page": 53,
+      "district": "San Francisco",
+      "score": 0.489
+     },
+     {
+      "rank": 3,
+      "id": "B:beigebook-2026-10:p053:003:5ae7a1f2",
+      "page": 53,
+      "district": "San Francisco",
+      "score": 0.437
+     },
+     {
+      "rank": 4,
+      "id": "B:beigebook-2026-10:p053:006:311b3d37",
+      "page": 53,
+      "district": "San Francisco",
+      "score": 0.4205
+     },
+     {
+      "rank": 5,
+      "id": "B:beigebook-2026-10:p052:001:30769d23",
+      "page": 52,
+      "district": "San Francisco",
+      "score": 0.4199
+     }
+    ],
+    "new_context_ids": [
+     "B:beigebook-2026-10:p054:005:351bf07c",
+     "B:beigebook-2026-10:p053:001:4adbdc6a",
+     "B:beigebook-2026-10:p053:003:5ae7a1f2",
+     "B:beigebook-2026-10:p053:006:311b3d37",
+     "B:beigebook-2026-10:p052:001:30769d23"
+    ],
+    "dropped_by_budget": []
+   },
+   {
+    "event": "submit_answer",
+    "abstain": true,
+    "answer_raw": "The report does not specify the percentage change in single-family home prices year over year in the San Francisco District.",
+    "citation_labels": [],
+    "invalid_labels": []
+   }
+  ],
+  "num_searches": 1,
+  "llm_calls": 2,
+  "labels": {
+   "S1": "B:beigebook-2026-10:p054:005:351bf07c",
+   "S2": "B:beigebook-2026-10:p053:001:4adbdc6a",
+   "S3": "B:beigebook-2026-10:p053:003:5ae7a1f2",
+   "S4": "B:beigebook-2026-10:p053:006:311b3d37",
+   "S5": "B:beigebook-2026-10:p052:001:30769d23"
+  },
+  "context_ids": [
+   "B:beigebook-2026-10:p054:005:351bf07c",
+   "B:beigebook-2026-10:p053:001:4adbdc6a",
+   "B:beigebook-2026-10:p053:003:5ae7a1f2",
+   "B:beigebook-2026-10:p053:006:311b3d37",
+   "B:beigebook-2026-10:p052:001:30769d23"
+  ],
+  "context": "[B:beigebook-2026-10:p054:005:351bf07c | starter/data/BeigeBook_20261014.pdf | page 54]\n[San Francisco | Real Estate and Construction] Residential real estate conditions softened modestly. Rising mortgage rates, elevated asking prices, and limited supply curtailed single-family home sales across the District. Supply continued to outpace demand in multifamily markets, though a large developer in the Mountain West observed vacancies slowly being absorbed and leasing concessions easing.\n\n[B:beigebook-2026-10:p053:001:4adbdc6a | starter/data/BeigeBook_20261014.pdf | page 53]\n[San Francisco | Prices] Prices rose moderately and at a faster pace than in the prior reporting period. Elevated prices for diesel and other fuels pushed up transportation and freight costs for businesses across the District. Contacts in several sectors, including manufacturing, passed the increased costs on to their customers. One manufacturer reported that every material purchased in recent weeks carried a freight surcharge.\n\n[B:beigebook-2026-10:p053:003:5ae7a1f2 | starter/data/BeigeBook_20261014.pdf | page 53]\n[San Francisco | Community Conditions] Conditions in the community support and services sector weakened somewhat. Nonprofit organizations continued to find it challenging to meet elevated demand for their services as operating costs rose and funding remained constrained. Contacts noted that households facing higher food and energy prices increasingly relied on community assistance programs. Housing affordability also remained a salient concern for renters and first-time home buyers.\n\n[B:beigebook-2026-10:p053:006:311b3d37 | starter/data/BeigeBook_20261014.pdf | page 53]\n[San Francisco | Retail Trade and Services] Contacts continued to describe economic conditions as bifurcated or K-shaped, with one contact observing that mounting financial pressures on lower-income families have spread to impact middle-income households. In Northern California, sales at luxury and specialty retailers outperformed those at large department stores, while a national value retailer reported attracting customers that typically shopped at more expensive competitors.\n\n[B:beigebook-2026-10:p052:001:30769d23 | starter/data/BeigeBook_20261014.pdf | page 52]\n[San Francisco | Summary of Economic Activity] Conditions were mixed in manufacturing and stable in commercial real estate, while conditions softened slightly in residential real estate, agriculture, and financial services. Community-serving organizations struggled to meet elevated demand for their services as funding remained constrained. Contacts maintained a generally soft economic outlook, with similar sentiment to the prior period.",
+  "context_chars": 2688,
+  "tokens": {
+   "input": 1610,
+   "output": 71
+  },
+  "cost_usd": 0.000284,
+  "elapsed_ms": 3174.1,
+  "split": "test",
+  "context_hit": null
+ }
+]

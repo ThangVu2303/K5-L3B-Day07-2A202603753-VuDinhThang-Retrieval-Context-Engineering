@@ -1,0 +1,16 @@
+# LLM agent (GPT-4o-mini qua OpenAI hoặc OpenRouter)
+openai>=1.40
+python-dotenv>=1.0
+tiktoken>=0.7
+
+# Retrieval
+numpy==2.4.6
+rank-bm25>=0.2.2
+
+# Day 6 vector store + embedding (cùng phiên bản Day 6)
+# Cài torch CPU trước:
+#   pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+psycopg[binary]==3.3.8
+pgvector==0.5.1
+sentence-transformers==6.3.0
+transformers==5.23.0

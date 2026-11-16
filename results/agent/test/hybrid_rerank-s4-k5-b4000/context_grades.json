@@ -1,0 +1,27 @@
+[
+ {
+  "query_id": "q16",
+  "context_grade": 2,
+  "reason": "S1 p48 [Dallas | Prices] chứa nguyên văn evidence, có District và trang."
+ },
+ {
+  "query_id": "q17",
+  "context_grade": 2,
+  "reason": "S1 p51 [Dallas | Agriculture] chứa cả hai con số, có District và trang."
+ },
+ {
+  "query_id": "q18",
+  "context_grade": 2,
+  "reason": "S1 p53 [San Francisco | Prices] chứa nguyên văn evidence."
+ },
+ {
+  "query_id": "q19",
+  "context_grade": 2,
+  "reason": "S2 p37 [St. Louis | Prices]: chunk bắt đầu giữa câu ('workers declined job offers…') nhưng header District = St. Louis cho đủ điều kiện 'Eighth District'."
+ },
+ {
+  "query_id": "q20",
+  "context_grade": 2,
+  "reason": "S1 p54 [San Francisco | Agriculture…] chứa nguyên văn evidence."
+ }
+]

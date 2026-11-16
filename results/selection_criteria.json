@@ -1,0 +1,14 @@
+{
+  "registered_at": "2026-11-16T04:48:03Z",
+  "registered_before": "agent experiments A (dense), B (no district guard), C (prompt v2) and before any test run",
+  "split_for_selection": "dev",
+  "rule": [
+    "1) highest mean grounded answer (manual 0/1/2) on dev answerable questions",
+    "2) tie: more correct abstentions on unanswerable + fewer false abstentions on answerable",
+    "3) tie: higher valid-citation rate (manual)",
+    "4) tie: higher Context Evidence Rate",
+    "5) tie: lower cost and median latency"
+  ],
+  "baseline_for_test": "agent with dense retriever (Day 6 vector store), prompt v1, district guard on",
+  "test_policy": "run once, after writing results/selection.json; no changes after seeing test"
+}

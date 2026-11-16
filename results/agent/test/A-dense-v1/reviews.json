@@ -1,0 +1,52 @@
+[
+ {
+  "query_id": "q16",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p48 Dallas): 'higher price for diesel … most commonly cited factor driving up costs'. Giống cấu hình chọn."
+ },
+ {
+  "query_id": "q17",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p51): fertilizer +10–25% và diesel 'nearly doubled'. Dense cần 2 lượt search."
+ },
+ {
+  "query_id": "q18",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p53 SF): lumber và wood products giảm giá; một công ty xây dựng hạ giá. Bỏ chi tiết 'Mountain West' nhưng không sai; yêu cầu chính đạt."
+ },
+ {
+  "query_id": "q19",
+  "answer_grade": 0,
+  "citation_support": [],
+  "reason": "TỪ CHỐI NHẦM câu có đáp án. Câu hỏi dùng tên 'Eighth District' (= St. Louis); dense không ánh xạ được, 4 lượt search chỉ trả p52, p41, p32, p44, p13, p11, p9, p5, p17; context không có p37. Model từ chối đúng quy tắc (không bịa) nhưng theo thang chấm, từ chối câu có đáp án = 0."
+ },
+ {
+  "query_id": "q20",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p54 SF): Middle East conflict → sulfur prices up sharply → phosphate producers curtail output."
+ },
+ {
+  "query_id": "u03",
+  "abstention_correct": true,
+  "citation_support": [],
+  "reason": "Search có filter Dallas, đọc p50 rồi từ chối; không bịa số permit."
+ },
+ {
+  "query_id": "u04",
+  "abstention_correct": true,
+  "citation_support": [],
+  "reason": "Search có filter SF rồi từ chối; không đưa ra % thay đổi giá nhà."
+ }
+]

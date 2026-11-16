@@ -1,0 +1,134 @@
+[
+ {
+  "query_id": "q01",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p3 About) ghi nguyên văn 'Reports are published eight times per year.' Câu trả lời đúng và đủ."
+ },
+ {
+  "query_id": "q02",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S2 (p5) ghi 'summarizes comments received from contacts outside the Federal Reserve System and is not a commentary on the views of Federal Reserve officials'. Câu trả lời không nói thẳng 'No' nhưng khẳng định không phản ánh quan điểm của quan chức Fed, tức đã trả lời câu hỏi có/không; đạt yêu cầu 'NOT a commentary'."
+ },
+ {
+  "query_id": "q03",
+  "answer_grade": 0,
+  "citation_support": [],
+  "reason": "TỪ CHỐI NHẦM câu có đáp án. Không có kiểm tra district: model tự đặt district='About' cho cả 3 lượt search (filter_source=model), chỉ lấy được p3–p4, evidence ở p5 (National) bị loại. Câu trả lời còn kèm khẳng định sai 'prepared by the Federal Reserve System'."
+ },
+ {
+  "query_id": "q04",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p5): '...four reported slight growth, and three reported no significant change' về overall economic activity. Trả lời 'Three', không nhầm với con số 'four' (employment)."
+ },
+ {
+  "query_id": "q05",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p6 National Prices) hỗ trợ ý chính: diesel giá cao, fuel surcharges chuyển chi phí dọc chuỗi cung ứng. Câu thứ hai (tăng giá chọn lọc, dự kiến tăng giá khi hợp đồng hết hạn) đúng theo S2 (p6), nhưng là thông tin thêm ngoài trọng tâm câu hỏi. Cả hai citation đều hỗ trợ đúng phần mình trích."
+ },
+ {
+  "query_id": "q06",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "reason": "S1 (p22), S2 (p21): 'eleventh consecutive (reporting) period'."
+ },
+ {
+  "query_id": "q07",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p44): aluminum, copper, fuel; shipping và chậm nhận hàng nêu riêng ('Additionally'), đúng văn bản."
+ },
+ {
+  "query_id": "q08",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p41): 'more than one-third … about the same share as in the previous report'."
+ },
+ {
+  "query_id": "q09",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p26): 30% và chuyện cây xà lách; ý price sensitivity nối bằng 'while also', không thêm nhân quả."
+ },
+ {
+  "query_id": "q10",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p11 Boston = New England): 'dominated by people nearing or entering retirement'."
+ },
+ {
+  "query_id": "q11",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p28 Atlanta): 'Most contacts reported moderate annual wage increases in the 2 to 3 percent range.' Không nhầm với St. Louis 2.5% hay Philadelphia 4%."
+ },
+ {
+  "query_id": "q12",
+  "answer_grade": 1,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p17) hỗ trợ '4 percent (up from 2.5 percent last year)', 'high cost of living', 'weaker labor availability' (đạt >= 2 lý do). NHƯNG lý do thứ ba bị viết sai thành 'higher-than-usual wage increases overall'; văn bản gốc là '...wage increases by competitors' (chữ 'competitors' ở chunk p18). Chunk p17 bị cắt giữa câu nên model tự điền 'overall'. Có một khẳng định sai → đúng một phần."
+ },
+ {
+  "query_id": "q13",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p34 Chicago = Seventh District): 'spend more on fuel to dry bushels, compounding the effect of high energy prices on the costs of harvest'. Đủ hai yêu cầu. Câu trả lời gộp 'heavy rains ... lower yields' vào nguyên nhân tăng chi phí; văn bản chỉ nói mưa làm chậm thu hoạch và giảm năng suất. Diễn giải hơi rộng nhưng đáp án kỳ vọng cũng nêu mưa lớn."
+ },
+ {
+  "query_id": "q14",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] S1 (p15 New York): 'Industrial demand remained strong, largely driven by data centers.' Ý thêm về bán bất động sản thương mại chậm lại do lãi suất cũng có trong S1."
+ },
+ {
+  "query_id": "q15",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "reason": "S1 (p46): diesel shortages → early delivery. 'attributed to' Middle Eastern shock là diễn giải 'Amid'; không nêu 'to ensure availability' nhưng ý ngầm có."
+ },
+ {
+  "query_id": "u01",
+  "abstention_correct": true,
+  "citation_support": [],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] Agent đã search ('Boston' + unemployment) rồi từ chối: 'not mentioned in the report'. Không đưa ra con số hay ước lượng. Đúng: Beige Book không có tỷ lệ thất nghiệp (kiểm tra regex 'unemploy' 0 hit)."
+ },
+ {
+  "query_id": "u02",
+  "abstention_correct": true,
+  "citation_support": [],
+  "reason": "[Giống hệt câu trả lời đã chấm ở hybrid_rerank-s4-k5-b4000] Agent đã search rồi từ chối: không có thông tin giá diesel mỗi gallon ở Atlanta. Không đưa ra con số, không lấy số '+30%' của Richmond. Đúng: tài liệu không có giá theo $/gallon."
+ }
+]

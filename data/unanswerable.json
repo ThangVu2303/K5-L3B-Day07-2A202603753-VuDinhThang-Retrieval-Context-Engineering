@@ -1,0 +1,62 @@
+[
+ {
+  "id": "u01",
+  "split": "dev",
+  "question": "What was the unemployment rate in the Boston District in September 2026?",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "absence_reason": "The Beige Book is qualitative and reports no unemployment rate for any District. The Boston report (p9-12) describes labor markets only in words (e.g. hiring difficulty for specialized roles, p11) and contains no percentages.",
+  "hard_negatives": [{"page": 11, "district": "Boston", "note": "Boston Labor Markets: qualitative hiring/retirement discussion, no rate"}],
+  "absence_check": [
+   {"pattern": "unemploy", "district": null},
+   {"pattern": "\\d+(\\.\\d+)?\\s*(percent|%)", "district": "Boston"}
+  ]
+ },
+ {
+  "id": "u02",
+  "split": "dev",
+  "question": "What was the average price per gallon of diesel in the Atlanta District during the reporting period?",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "absence_reason": "Atlanta mentions rising diesel prices (p28) and solid diesel demand (p30) but gives no price level. No page of the document states a fuel price in dollars, cents or per gallon.",
+  "hard_negatives": [
+   {"page": 28, "district": "Atlanta", "note": "Transportation costs grew notably as diesel prices rose"},
+   {"page": 30, "district": "Atlanta", "note": "Demand for diesel and gasoline remained solid"},
+   {"page": 26, "district": "Richmond", "note": "Diesel up thirty percent (a change, not a price, and another District)"}
+  ],
+  "absence_check": [
+   {"pattern": "per gallon|a gallon|\\$|\\bcents\\b|dollars? per", "district": null},
+   {"pattern": "diesel[^.]*\\d|\\d[^.]*diesel", "district": "Atlanta"}
+  ]
+ },
+ {
+  "id": "u03",
+  "split": "test",
+  "question": "How many data center permit applications were frozen by the Texas regulatory pause in the Dallas District?",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "absence_reason": "Dallas p50 says a Texas regulatory pause froze permits sought by data centers until grid and water impacts are audited, but gives no count of permits or applications.",
+  "hard_negatives": [{"page": 50, "district": "Dallas", "note": "Regulatory pause has frozen permits sought by data centers (no number)"}],
+  "absence_check": [
+   {"pattern": "permit[^.]*\\d|\\d[^.]*permit", "district": null},
+   {"pattern": "data cent[^.]*\\d|\\d[^.]*data cent", "district": "Dallas"}
+  ]
+ },
+ {
+  "id": "u04",
+  "split": "test",
+  "question": "By what percentage did single-family home prices change year over year in the San Francisco District?",
+  "answerable": false,
+  "expected_behavior": "search_and_abstain",
+  "absence_reason": "San Francisco p54 says residential real estate softened modestly with elevated asking prices and fewer single-family sales, but reports no home-price change. The San Francisco report (p52-55) contains no percentages.",
+  "hard_negatives": [
+   {"page": 54, "district": "San Francisco", "note": "Residential real estate softened modestly; elevated asking prices"},
+   {"page": 53, "district": "San Francisco", "note": "Housing affordability a salient concern"},
+   {"page": 11, "district": "Boston", "note": "Median home prices increased modestly (qualitative, wrong District)"}
+  ],
+  "absence_check": [
+   {"pattern": "\\d+(\\.\\d+)?\\s*(percent|%)", "district": "San Francisco"},
+   {"pattern": "home price|house price|housing price|median price", "district": "San Francisco"}
+  ]
+ }
+]
