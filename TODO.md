@@ -13,7 +13,7 @@
 - [x] Tạo `.env` (`PROVIDER`, `MODEL`, `OPENAI_API_KEY`) và `.env.example`; `.env` đã nằm trong `.gitignore`
 - [x] Chọn LLM hỗ trợ tool calling cho agent: `openai/gpt-4o-mini` qua OpenRouter
 - [x] Chạy `src/check_env.py` thành công (chat + tool calling)
-- [ ] Đẩy repo lên GitHub cá nhân theo [SUBMISSION.md](SUBMISSION.md), không push vào repo đề
+- [x] Đẩy repo lên GitHub cá nhân theo [SUBMISSION.md](SUBMISSION.md) (origin = ThangVu2303/..., không push vào repo đề)
 
 ## 1. Dữ liệu & kết nối Day 6 — 13 điểm
 
@@ -117,7 +117,7 @@
 - [x] Bảng đánh giá agent (tool use, grounded, citation, abstention) dev + test
 - [x] Ví dụ trình bày: q17 có bằng chứng, u04 thiếu bằng chứng, q19 baseline lỗi
 - [x] Kết luận, nguồn, giới hạn (mục cuối báo cáo)
-- [ ] Kiểm tra không commit `.env`, API key, token, dữ liệu mật
+- [x] Kiểm tra không commit `.env`, API key, token, dữ liệu mật (đã quét; chỉ `.env.example` được track)
 - [ ] Cấp quyền xem repo cho người chấm, nộp link
 
 ---
