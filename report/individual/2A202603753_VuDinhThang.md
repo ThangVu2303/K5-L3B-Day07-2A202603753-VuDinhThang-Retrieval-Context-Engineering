@@ -99,7 +99,7 @@
 4. Nếu hòa: Context Evidence Rate cao hơn.
 5. Nếu hòa: rẻ và nhanh hơn.
 
-**Các thử nghiệm agent trên dev** (cùng 17 câu, GPT-4o-mini, temperature 0, s4/k5/b4000; nhãn chấm tay trong `reviews.json` của từng thư mục, câu nào trả lời giống hệt bản đã chấm thì dùng lại nhãn):
+**Các thử nghiệm agent trên dev** (cùng 17 câu, GPT-4o-mini, temperature 0, s4/k5/b4000; nhãn chấm tay trong `reviews.json` của từng thư mục, câu nào trả lời giống hệt bản đã chấm thì dùng lại nhãn). Nhãn của A/B/C và test được soạn nháp theo cùng quy trình như nhãn dev ban đầu; sinh viên đã đọc lại và **chấp nhận toàn bộ**, gồm các quyết định ở ranh giới: q12 "overall" chấm 1, C-q14 chấm 2.
 
 | Cấu hình (dev) | Giả thuyết | Grounded 0/1/2 · TB | Citation hợp lệ | Từ chối đúng | Từ chối nhầm | Context (agent) | Số lượt search | Token vào/ra | Chi phí · median |
 |---|---|---|---|---|---|---|---|---|---|
@@ -210,7 +210,7 @@
 | Chi phí | $0.0049 tổng (~$0.0003/câu) |
 | Thời gian | median 3.8 s/câu (chưa tính ~15–40 s nạp model một lần) |
 
-  Trace: [results/agent/dev/hybrid_rerank-s4-k5-b4000/](../../results/agent/dev/hybrid_rerank-s4-k5-b4000/) (`traces.json`, `summary.json`, `review.md`, `reviews_template.json`). Lệnh: `.venv\Scripts\python src/run_agent.py --split dev`.
+  Trace: [results/agent/dev/hybrid_rerank-s4-k5-b4000/](../../results/agent/dev/hybrid_rerank-s4-k5-b4000/) (`traces.json`, `summary.json`, `reviews.json`, `agent_metrics.json`). Lệnh: `.venv\Scripts\python src/run_agent.py --split dev`.
 
 - **Đánh giá câu trả lời (chấm tay, dev 17 câu):**
   - **Cách chấm:** đọc từng câu trả lời, mở các chunk được trích trong `traces.json` và đối chiếu với `expected_answer` và `grounding_requirements` (từ Day 6).
@@ -246,7 +246,7 @@
 | Nội dung | Đường dẫn |
 |---|---|
 | Trace + summary retrieval | `results/retrieval/{dev,test}/` (`summary.json`, `traces.jsonl`) |
-| Trace agent | `results/agent/{dev,test}/<cấu hình>/traces.json` (+ `summary.json`, `review.md`) |
+| Trace agent | `results/agent/{dev,test}/<cấu hình>/traces.json` (+ `summary.json`) |
 | Nhãn chấm tay | `results/agent/{dev,test}/<cấu hình>/reviews.json`; context test: `context_grades.json` |
 | Tổng hợp nhãn | `results/agent/{dev,test}/<cấu hình>/agent_metrics.json` (`starter/agent_metrics.py`) |
 | Tiêu chí và quyết định chọn | [results/selection_criteria.json](../../results/selection_criteria.json), [results/selection.json](../../results/selection.json) |

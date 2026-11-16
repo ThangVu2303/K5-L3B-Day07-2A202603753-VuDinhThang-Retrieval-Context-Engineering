@@ -9,3 +9,7 @@ __pycache__/
 # Local datasets and generated output; share permitted artifacts deliberately
 starter/data/
 starter/results/
+
+# File phụ do src/run_agent.py sinh ra để chấm tay (không nộp)
+results/agent/**/review.md
+results/agent/**/reviews_template.json

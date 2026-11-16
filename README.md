@@ -2,7 +2,7 @@
 
 > ## Bài làm: Vũ Đình Thắng · 2A202603753
 >
-> **Báo cáo:** [report/individual/2A202603753_VuDinhThang.md](report/individual/2A202603753_VuDinhThang.md) · **Checklist:** [TODO.md](TODO.md)
+> **Báo cáo:** [report/individual/2A202603753_VuDinhThang.md](report/individual/2A202603753_VuDinhThang.md)
 >
 > **Kết quả chính.** Corpus: Beige Book 10/2026 (Fed), 329 chunk Day 6, pgvector + MiniLM-L12. Agent: GPT-4o-mini với tool `search` (hybrid RRF + cross-encoder rerank).
 >
@@ -68,7 +68,7 @@ python src/run_agent.py --split dev --prompt v2 --name C-hybrid_rerank-v2
 python src/run_agent.py --split test                                  # sau khi chốt
 python src/run_agent.py --split test --retriever dense --name A-dense-v1
 ```
-Mỗi lần chạy ghi vào `results/agent/<split>/<name>/`: `traces.json`, `summary.json`, `review.md`, `reviews_template.json`. Chi phí khoảng $0.005 cho 17 câu dev. LLM ở temperature 0 nhưng qua API nên câu chữ có thể khác nhẹ giữa các lần chạy; nhãn chấm tay ứng với trace đã commit.
+Mỗi lần chạy ghi vào `results/agent/<split>/<name>/`: `traces.json`, `summary.json`, cùng hai file phụ để chấm tay là `review.md` và `reviews_template.json` (không commit, đã có trong `.gitignore`). Nhãn đã chấm nằm ở `reviews.json`. Chi phí khoảng $0.005 cho 17 câu dev. LLM ở temperature 0 nhưng qua API nên câu chữ có thể khác nhẹ giữa các lần chạy; nhãn chấm tay ứng với trace đã commit.
 
 ### 6. Tổng hợp nhãn chấm tay
 ```bash
